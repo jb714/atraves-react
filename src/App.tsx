@@ -1,16 +1,18 @@
 import { ChakraProvider } from "@chakra-ui/react"
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 import Header from "./components/Header";
-import MapsAndInputContainer from "./components/MapsAndInputContainer";
-import Comments from "./components/Comments";
+import ContentWrapper from "./components/ContentWrapper";
 
 function App() {
   return (
     <div className="App">
-      <ChakraProvider>
-        <Header />
-        <MapsAndInputContainer />
-        <Comments />
-      </ChakraProvider>
+      <I18nextProvider i18n={i18n}>
+        <ChakraProvider>
+          <Header />
+          <ContentWrapper />
+        </ChakraProvider>
+      </I18nextProvider>
     </div>
   );
 }

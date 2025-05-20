@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "L'altro lato del mondo, qui"
+  },
+  "location": {
+    "original": "Posizione Originale",
+    "antipode": "Posizione Antipode",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Oceano Indiano (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "coordinates": "Inserisci Coordinate",
+    "address": "Inserisci Indirizzo",
+    "place": "Cerca per Luogo",
+    "postal": "Cerca per CAP",
+    "landmark": "Cerca per Punto di Riferimento",
+    "useMyLocation": "Usa la Mia Posizione",
+    "gettingLocation": "Ottenimento della tua posizione...",
+    "latitude": {
+      "label": "Inserisci Latitudine",
+      "placeholder": "Intervallo: -90 a 90° (predefinito: Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Inserisci Longitudine",
+      "placeholder": "Intervallo: -180 a 180° (predefinito: Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Messaggio nella Bottiglia",
+    "description": "Lascia un messaggio che potrà essere trovato solo dall'altra parte del mondo, o controlla se c'è un messaggio che ti aspetta qui.",
+    "leaveMessage": "Lascia un Messaggio",
+    "checkMessages": "Controlla i Messaggi",
+    "modal": {
+      "title": "Lascia un Messaggio",
+      "discoverableAt": "Il tuo messaggio sarà scoperto a:",
+      "placeholder": "Scrivi il tuo messaggio qui...",
+      "send": "Invia Messaggio"
+    },
+    "toast": {
+      "sent": {
+        "title": "Messaggio inviato!",
+        "description": "Il tuo messaggio sarà scoperto nella posizione antipode."
+      },
+      "notFound": {
+        "title": "Nessun messaggio trovato",
+        "description": "Non ci sono messaggi in questa posizione. Perché non lasciarne uno?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Geolocalizzazione non supportata",
+        "description": "Il tuo browser non supporta la geolocalizzazione"
+      },
+      "error": {
+        "title": "Errore di localizzazione",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Errore nel calcolo dell'antipode",
+      "description": "{{message}}"
+    }
+  }
+} 

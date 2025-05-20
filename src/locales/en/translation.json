@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "The other side of the world, here"
+  },
+  "location": {
+    "original": "Original Location",
+    "antipode": "Antipode Location",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Indian Ocean (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "useMyLocation": "Use My Location",
+    "gettingLocation": "Getting your location...",
+    "coordinates": {
+      "label": "Enter Coordinates",
+      "placeholder": "Use the coordinate inputs below"
+    },
+    "address": {
+      "label": "Enter Address",
+      "placeholder": "e.g., 123 Main St, City, Country"
+    },
+    "place": {
+      "label": "Search by Place",
+      "placeholder": "e.g., Eiffel Tower, Statue of Liberty"
+    },
+    "postal": {
+      "label": "Search by Postal Code",
+      "placeholder": "e.g., 90210, SW1A 1AA"
+    },
+    "landmark": {
+      "label": "Search by Landmark",
+      "placeholder": "e.g., Grand Canyon, Mount Everest"
+    },
+    "latitude": {
+      "label": "Enter Latitude",
+      "placeholder": "Range: -90 to 90° (defaults to Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Enter Longitude",
+      "placeholder": "Range: -180 to 180° (defaults to Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Message in a Bottle",
+    "description": "Leave a message that can only be found at the opposite side of the world, or check if there's a message waiting for you here.",
+    "leaveMessage": "Leave a Message",
+    "checkMessages": "Check for Messages",
+    "location": {
+      "updated": {
+        "title": "Location updated",
+        "description": "Your current location has been set"
+      }
+    },
+    "modal": {
+      "title": "Leave a Message",
+      "discoverableAt": "Your message will be discoverable at:",
+      "placeholder": "Write your message here...",
+      "send": "Send Message"
+    },
+    "toast": {
+      "sent": {
+        "title": "Message sent!",
+        "description": "Your message will be discoverable at the antipode location."
+      },
+      "notFound": {
+        "title": "No messages found",
+        "description": "There are no messages at this location. Why not leave one?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Geolocation not supported",
+        "description": "Your browser doesn't support geolocation"
+      },
+      "error": {
+        "title": "Location error",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Error calculating antipode",
+      "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "Invalid Latitude",
+        "description": "Latitude must be between -90 and 90 degrees"
+      },
+      "invalidLongitude": {
+        "title": "Invalid Longitude",
+        "description": "Longitude must be between -180 and 180 degrees"
+      },
+      "invalid": {
+        "title": "Invalid Coordinates",
+        "description": "Please check your coordinates"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "Geocoding Failed",
+        "description": "Could not find coordinates for this address"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "Location not found",
+        "description": "Please try a different search term"
+      },
+      "failed": {
+        "title": "Search failed",
+        "description": "{{message}}"
+      }
+    }
+  }
+} 

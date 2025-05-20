@@ -1,11 +1,14 @@
 import { useState } from "react"
 import Map from "./Map"
 import LocationInputContainer from "./LocationInputContainer"
+import Comments from "./Comments"
 import { calculateAntipode } from "../utils/locationUtils"
 import { useToast } from "@chakra-ui/react"
 import { Grid, GridItem, Text, Box } from "@chakra-ui/react"
+import { useTranslation } from "react-i18next"
 
-const MapsSection = () => {
+const ContentWrapper = () => {
+    const { t } = useTranslation()
     const [latitude, setLatitude] = useState('')
     const [longitude, setLongitude] = useState('')
     const [address, setAddress] = useState('')
@@ -33,8 +36,8 @@ const MapsSection = () => {
         } catch (error) {
             // Show error toast if calculation fails
             toast({
-                title: "Error calculating antipode",
-                description: error instanceof Error ? error.message : "Invalid coordinates",
+                title: t('errors.antipode.title'),
+                description: t('errors.antipode.description', { message: error instanceof Error ? error.message : "Invalid coordinates" }),
                 status: "error",
                 duration: 3000,
                 isClosable: true,
@@ -64,12 +67,12 @@ const MapsSection = () => {
                 <GridItem>
                     <Box mb={2}>
                         <Text fontSize={["md", "lg"]} fontWeight="medium">
-                            Original Location
+                            {t('location.original')}
                         </Text>
                         <Text fontSize={["xs", "sm"]} color="gray.600">
                             {latitude && longitude ? 
                                 `(${parseFloat(latitude).toFixed(4)}°, ${parseFloat(longitude).toFixed(4)}°)` : 
-                                "Los Angeles, CA (34.0522°, -118.2437°)"}
+                                t('location.defaultLocation')}
                         </Text>
                     </Box>
                     <div id="UserMap" className="map-container">
@@ -79,12 +82,12 @@ const MapsSection = () => {
                 <GridItem>
                     <Box mb={2}>
                         <Text fontSize={["md", "lg"]} fontWeight="medium">
-                            Antipode Location
+                            {t('location.antipode')}
                         </Text>
                         <Text fontSize={["xs", "sm"]} color="gray.600">
                             {latitude && longitude ? 
                                 `(${antipodeCoordinates.lat.toFixed(4)}°, ${antipodeCoordinates.lng.toFixed(4)}°)` : 
-                                "Indian Ocean (-34.0522°, 61.7563°)"}
+                                t('location.defaultAntipode')}
                         </Text>
                     </Box>
                     <div id="AntipodeMap" className="map-container">
@@ -92,8 +95,14 @@ const MapsSection = () => {
                     </div>
                 </GridItem>
             </Grid>
+            <Comments 
+                currentLat={coordinates.lat}
+                currentLng={coordinates.lng}
+                antipodeLat={antipodeCoordinates.lat}
+                antipodeLng={antipodeCoordinates.lng}
+            />
         </Box>
     )
 }
 
-export default MapsSection
+export default ContentWrapper

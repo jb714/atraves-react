@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "세계의 반대편, 여기에"
+  },
+  "location": {
+    "original": "원래 위치",
+    "antipode": "대척점 위치",
+    "defaultLocation": "로스앤젤레스, 캘리포니아 (34.0522°, -118.2437°)",
+    "defaultAntipode": "인도양 (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "coordinates": "좌표 입력",
+    "address": "주소 입력",
+    "place": "장소로 검색",
+    "postal": "우편번호로 검색",
+    "landmark": "랜드마크로 검색",
+    "useMyLocation": "내 위치 사용",
+    "gettingLocation": "위치 정보를 가져오는 중...",
+    "latitude": {
+      "label": "위도 입력",
+      "placeholder": "범위: -90에서 90° (기본값: 로스앤젤레스: 34.0522)"
+    },
+    "longitude": {
+      "label": "경도 입력",
+      "placeholder": "범위: -180에서 180° (기본값: 로스앤젤레스: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "병 속의 메시지",
+    "description": "세계의 반대편에서만 발견될 수 있는 메시지를 남기거나, 여기에서 기다리는 메시지가 있는지 확인하세요.",
+    "leaveMessage": "메시지 남기기",
+    "checkMessages": "메시지 확인",
+    "modal": {
+      "title": "메시지 남기기",
+      "discoverableAt": "귀하의 메시지는 여기에서 발견될 것입니다:",
+      "placeholder": "여기에 메시지를 작성하세요...",
+      "send": "메시지 보내기"
+    },
+    "toast": {
+      "sent": {
+        "title": "메시지가 전송되었습니다!",
+        "description": "귀하의 메시지는 대척점 위치에서 발견될 것입니다."
+      },
+      "notFound": {
+        "title": "메시지를 찾을 수 없습니다",
+        "description": "이 위치에는 메시지가 없습니다. 메시지를 남겨보시겠습니까?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "위치 정보가 지원되지 않습니다",
+        "description": "귀하의 브라우저는 위치 정보를 지원하지 않습니다"
+      },
+      "error": {
+        "title": "위치 오류",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "대척점 계산 중 오류가 발생했습니다",
+      "description": "{{message}}"
+    }
+  }
+} 

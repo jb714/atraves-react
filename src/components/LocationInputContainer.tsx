@@ -3,6 +3,7 @@ import LocationInput from "./LocationInput";
 import { Text, useToast, Button, HStack, Grid, GridItem, RadioGroup, Radio, Stack, Divider } from "@chakra-ui/react";
 import { isValidLatitude, isValidLongitude, geocodeAddress } from "../utils/locationUtils";
 import useDebounce from "../hooks/useDebounce";
+import { useTranslation } from "react-i18next";
 
 type InputMode = "coordinates" | "address" | "place" | "postal" | "landmark";
 
@@ -23,6 +24,7 @@ const LocationInputContainer = ({
     address = "",
     setAddress = () => {}
 }: LocationInputContainerProps) => {
+    const { t } = useTranslation();
     const [inputMode, setInputMode] = useState<InputMode>("coordinates");
     const [isGeocoding, setIsGeocoding] = useState(false);
     const [isGettingLocation, setIsGettingLocation] = useState(false);
@@ -48,8 +50,8 @@ const LocationInputContainer = ({
         if (debouncedLatitude && !isValidLatitude(debouncedLatitude)) {
             if (showToast) {
                 toast({
-                    title: "Invalid Latitude",
-                    description: "Latitude must be between -90 and 90 degrees",
+                    title: t('errors.coordinates.invalidLatitude.title'),
+                    description: t('errors.coordinates.invalidLatitude.description'),
                     status: "error",
                     duration: 3000,
                     isClosable: true,
@@ -62,8 +64,8 @@ const LocationInputContainer = ({
         if (debouncedLongitude && !isValidLongitude(debouncedLongitude)) {
             if (showToast) {
                 toast({
-                    title: "Invalid Longitude",
-                    description: "Longitude must be between -180 and 180 degrees",
+                    title: t('errors.coordinates.invalidLongitude.title'),
+                    description: t('errors.coordinates.invalidLongitude.description'),
                     status: "error",
                     duration: 3000,
                     isClosable: true,
@@ -80,10 +82,10 @@ const LocationInputContainer = ({
             if (!isLatValid || !isLngValid) {
                 if (showToast) {
                     toast({
-                        title: "Invalid Coordinates",
+                        title: t('errors.coordinates.invalid.title'),
                         description: !isLatValid 
-                            ? "Latitude must be between -90 and 90 degrees"
-                            : "Longitude must be between -180 and 180 degrees",
+                            ? t('errors.coordinates.invalidLatitude.description')
+                            : t('errors.coordinates.invalidLongitude.description'),
                         status: "error",
                         duration: 3000,
                         isClosable: true,
@@ -109,8 +111,8 @@ const LocationInputContainer = ({
                     setLongitude(coords.lng.toString());
                 } else {
                     toast({
-                        title: "Geocoding Failed",
-                        description: "Could not find coordinates for this address",
+                        title: t('errors.geocoding.failed.title'),
+                        description: t('errors.geocoding.failed.description'),
                         status: "error",
                         duration: 3000,
                         isClosable: true,
@@ -120,7 +122,7 @@ const LocationInputContainer = ({
         };
 
         handleAddressChange();
-    }, [debouncedAddress, inputMode, setLatitude, setLongitude, toast]);
+    }, [debouncedAddress, inputMode, setLatitude, setLongitude, toast, t]);
 
     // Validate coordinates when they change, but don't show toasts
     useEffect(() => {
@@ -144,8 +146,8 @@ const LocationInputContainer = ({
                         }
                     } else {
                         toast({
-                            title: "Location not found",
-                            description: "Please try a different search term",
+                            title: t('errors.search.notFound.title'),
+                            description: t('errors.search.notFound.description'),
                             status: "error",
                             duration: 3000,
                             isClosable: true,
@@ -153,8 +155,8 @@ const LocationInputContainer = ({
                     }
                 } catch (error) {
                     toast({
-                        title: "Search failed",
-                        description: error instanceof Error ? error.message : "An error occurred",
+                        title: t('errors.search.failed.title'),
+                        description: t('errors.search.failed.description', { message: error instanceof Error ? error.message : "An error occurred" }),
                         status: "error",
                         duration: 3000,
                         isClosable: true,
@@ -166,13 +168,13 @@ const LocationInputContainer = ({
         };
 
         handleSearch();
-    }, [debouncedSearchQuery, inputMode, setLatitude, setLongitude, setAddress, toast]);
+    }, [debouncedSearchQuery, inputMode, setLatitude, setLongitude, setAddress, toast, t]);
 
     const handleGetCurrentLocation = () => {
         if (!navigator.geolocation) {
             toast({
-                title: "Geolocation not supported",
-                description: "Your browser doesn't support geolocation",
+                title: t('errors.geolocation.notSupported.title'),
+                description: t('errors.geolocation.notSupported.description'),
                 status: "error",
                 duration: 3000,
                 isClosable: true,
@@ -188,8 +190,8 @@ const LocationInputContainer = ({
                 setInputMode("coordinates");
                 setIsGettingLocation(false);
                 toast({
-                    title: "Location updated",
-                    description: "Your current location has been set",
+                    title: t('messages.location.updated.title'),
+                    description: t('messages.location.updated.description'),
                     status: "success",
                     duration: 2000,
                     isClosable: true,
@@ -198,8 +200,8 @@ const LocationInputContainer = ({
             (error) => {
                 setIsGettingLocation(false);
                 toast({
-                    title: "Location error",
-                    description: error.message,
+                    title: t('errors.geolocation.error.title'),
+                    description: t('errors.geolocation.error.description', { message: error.message }),
                     status: "error",
                     duration: 3000,
                     isClosable: true,
@@ -216,15 +218,15 @@ const LocationInputContainer = ({
     const getPlaceholderText = () => {
         switch (inputMode) {
             case "coordinates":
-                return "Use the coordinate inputs below";
+                return t('input.coordinates.placeholder');
             case "address":
-                return "e.g., 123 Main St, City, Country";
+                return t('input.address.placeholder');
             case "place":
-                return "e.g., Eiffel Tower, Statue of Liberty";
+                return t('input.place.placeholder');
             case "postal":
-                return "e.g., 90210, SW1A 1AA";
+                return t('input.postal.placeholder');
             case "landmark":
-                return "e.g., Grand Canyon, Mount Everest";
+                return t('input.landmark.placeholder');
             default:
                 return "";
         }
@@ -233,97 +235,74 @@ const LocationInputContainer = ({
     const getInputLabel = () => {
         switch (inputMode) {
             case "coordinates":
-                return "Enter Coordinates";
+                return t('input.coordinates.label');
             case "address":
-                return "Enter Address";
+                return t('input.address.label');
             case "place":
-                return "Search by Place Name";
+                return t('input.place.label');
             case "postal":
-                return "Search by Postal Code";
+                return t('input.postal.label');
             case "landmark":
-                return "Search by Landmark";
+                return t('input.landmark.label');
             default:
                 return "";
         }
     };
 
     return (
-        <>
-            <RadioGroup 
-                value={inputMode} 
-                onChange={(value) => {
-                    setInputMode(value as InputMode);
-                    setSearchQuery("");
-                }}
-                mb={4}
-                display="flex"
-                justifyContent="center"
-            >
+        <Stack spacing={4}>
+            <RadioGroup value={inputMode} onChange={(value) => setInputMode(value as InputMode)}>
                 <Stack direction="row" spacing={4} wrap="wrap" justify="center" align="center">
-                    <Radio value="coordinates">Enter Coordinates</Radio>
-                    <Radio value="address">Enter Address</Radio>
-                    <Radio value="place">Search by Place</Radio>
-                    <Radio value="postal">Search by Postal Code</Radio>
-                    <Radio value="landmark">Search by Landmark</Radio>
+                    <Radio value="coordinates">{t('input.coordinates.label')}</Radio>
+                    <Radio value="address">{t('input.address.label')}</Radio>
+                    <Radio value="place">{t('input.place.label')}</Radio>
+                    <Radio value="postal">{t('input.postal.label')}</Radio>
+                    <Radio value="landmark">{t('input.landmark.label')}</Radio>
                     <Divider orientation="vertical" height="24px" />
                     <Button
                         onClick={handleGetCurrentLocation}
                         isLoading={isGettingLocation}
-                        loadingText="Getting location..."
+                        loadingText={t('input.useMyLocation')}
                         colorScheme="blue"
                         size="sm"
                         variant="outline"
                     >
-                        Use My Location
+                        {t('input.useMyLocation')}
                     </Button>
                 </Stack>
             </RadioGroup>
 
-            {inputMode === "coordinates" ? (
-                <>
-                    {isGettingLocation && (
-                        <Text fontSize="sm" color="gray.500" textAlign="center" mb={4}>
-                            Getting your location...
-                        </Text>
-                    )}
-                    <Grid templateColumns="repeat(2, 1fr)" gap={4}>
-                        <GridItem>
-                            <LocationInput 
-                                label="Enter Latitude"
-                                value={latitude}
-                                onChange={(e) => setLatitude(e.target.value)}
-                                onBlur={() => validateCoordinates(true)}
-                                placeholder="Range: -90 to 90° (defaults to Los Angeles: 34.0522)"
-                            />
-                        </GridItem>
-                        <GridItem>
-                            <LocationInput 
-                                label="Enter Longitude"
-                                value={longitude}
-                                onChange={(e) => setLongitude(e.target.value)}
-                                onBlur={() => validateCoordinates(true)}
-                                placeholder="Range: -180 to 180° (defaults to Los Angeles: -118.2437)"
-                            />
-                        </GridItem>
-                    </Grid>
-                </>
-            ) : (
-                <>
-                    <LocationInput 
-                        label={getInputLabel()}
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder={getPlaceholderText()}
-                    />
-                    {isGeocoding && (
-                        <Text fontSize="sm" color="gray.500" mt={2}>
-                            Searching for location...
-                        </Text>
-                    )}
-                </>
+            {inputMode !== "coordinates" && (
+                <LocationInput
+                    label={getInputLabel()}
+                    placeholder={getPlaceholderText()}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
             )}
-        </>
-    )
-}
 
-export default LocationInputContainer
+            {inputMode === "coordinates" && (
+                <Grid templateColumns="repeat(2, 1fr)" gap={4}>
+                    <GridItem>
+                        <LocationInput
+                            label={t('input.latitude.label')}
+                            placeholder={t('input.latitude.placeholder')}
+                            value={latitude}
+                            onChange={(e) => setLatitude(e.target.value)}
+                        />
+                    </GridItem>
+                    <GridItem>
+                        <LocationInput
+                            label={t('input.longitude.label')}
+                            placeholder={t('input.longitude.placeholder')}
+                            value={longitude}
+                            onChange={(e) => setLongitude(e.target.value)}
+                        />
+                    </GridItem>
+                </Grid>
+            )}
+        </Stack>
+    );
+};
+
+export default LocationInputContainer;

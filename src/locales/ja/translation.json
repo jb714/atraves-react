@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "世界の反対側、ここに"
+  },
+  "location": {
+    "original": "元の位置",
+    "antipode": "対蹠点の位置",
+    "defaultLocation": "ロサンゼルス、CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "インド洋 (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "useMyLocation": "現在地を使用",
+    "gettingLocation": "位置情報を取得中...",
+    "coordinates": {
+      "label": "座標を入力",
+      "placeholder": "下の座標入力欄を使用してください"
+    },
+    "address": {
+      "label": "住所を入力",
+      "placeholder": "例：メインストリート123、都市、国"
+    },
+    "place": {
+      "label": "場所で検索",
+      "placeholder": "例：エッフェル塔、自由の女神"
+    },
+    "postal": {
+      "label": "郵便番号で検索",
+      "placeholder": "例：90210、SW1A 1AA"
+    },
+    "landmark": {
+      "label": "ランドマークで検索",
+      "placeholder": "例：グランドキャニオン、エベレスト山"
+    },
+    "latitude": {
+      "label": "緯度を入力",
+      "placeholder": "範囲: -90から90° (デフォルト: ロサンゼルス: 34.0522)"
+    },
+    "longitude": {
+      "label": "経度を入力",
+      "placeholder": "範囲: -180から180° (デフォルト: ロサンゼルス: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "瓶の中のメッセージ",
+    "description": "世界の反対側でのみ見つかるメッセージを残すか、ここで待っているメッセージがあるか確認してください。",
+    "leaveMessage": "メッセージを残す",
+    "checkMessages": "メッセージを確認",
+    "location": {
+      "updated": {
+        "title": "位置情報を更新しました",
+        "description": "現在の位置が設定されました"
+      }
+    },
+    "modal": {
+      "title": "メッセージを残す",
+      "discoverableAt": "あなたのメッセージはここで見つかります：",
+      "placeholder": "ここにメッセージを書いてください...",
+      "send": "メッセージを送信"
+    },
+    "toast": {
+      "sent": {
+        "title": "メッセージを送信しました！",
+        "description": "あなたのメッセージは対蹠点の位置で見つかります。"
+      },
+      "notFound": {
+        "title": "メッセージが見つかりません",
+        "description": "この位置にはメッセージがありません。メッセージを残してみませんか？"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "位置情報がサポートされていません",
+        "description": "お使いのブラウザは位置情報をサポートしていません"
+      },
+      "error": {
+        "title": "位置情報エラー",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "対蹠点の計算中にエラーが発生しました",
+      "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "無効な緯度",
+        "description": "緯度は-90度から90度の間である必要があります"
+      },
+      "invalidLongitude": {
+        "title": "無効な経度",
+        "description": "経度は-180度から180度の間である必要があります"
+      },
+      "invalid": {
+        "title": "無効な座標",
+        "description": "座標を確認してください"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "ジオコーディングに失敗しました",
+        "description": "この住所の座標を見つけることができませんでした"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "位置が見つかりません",
+        "description": "別の検索語を試してください"
+      },
+      "failed": {
+        "title": "検索に失敗しました",
+        "description": "{{message}}"
+      }
+    }
+  }
+} 

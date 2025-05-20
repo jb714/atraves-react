@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "Die andere Seite der Welt, hier"
+  },
+  "location": {
+    "original": "Ursprünglicher Standort",
+    "antipode": "Antipoden-Standort",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Indischer Ozean (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "useMyLocation": "Meinen Standort verwenden",
+    "gettingLocation": "Standort wird ermittelt...",
+    "coordinates": {
+      "label": "Koordinaten eingeben",
+      "placeholder": "Verwenden Sie die Koordinatenfelder unten"
+    },
+    "address": {
+      "label": "Adresse eingeben",
+      "placeholder": "z.B., Hauptstraße 123, Stadt, Land"
+    },
+    "place": {
+      "label": "Nach Ort suchen",
+      "placeholder": "z.B., Eiffelturm, Freiheitsstatue"
+    },
+    "postal": {
+      "label": "Nach Postleitzahl suchen",
+      "placeholder": "z.B., 90210, SW1A 1AA"
+    },
+    "landmark": {
+      "label": "Nach Sehenswürdigkeit suchen",
+      "placeholder": "z.B., Grand Canyon, Mount Everest"
+    },
+    "latitude": {
+      "label": "Breitengrad eingeben",
+      "placeholder": "Bereich: -90 bis 90° (Standard: Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Längengrad eingeben",
+      "placeholder": "Bereich: -180 bis 180° (Standard: Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Flaschenpost",
+    "description": "Hinterlassen Sie eine Nachricht, die nur auf der anderen Seite der Welt gefunden werden kann, oder prüfen Sie, ob hier eine Nachricht auf Sie wartet.",
+    "leaveMessage": "Nachricht hinterlassen",
+    "checkMessages": "Nachrichten prüfen",
+    "location": {
+      "updated": {
+        "title": "Standort aktualisiert",
+        "description": "Ihr aktueller Standort wurde festgelegt"
+      }
+    },
+    "modal": {
+      "title": "Nachricht hinterlassen",
+      "discoverableAt": "Ihre Nachricht wird gefunden bei:",
+      "placeholder": "Schreiben Sie Ihre Nachricht hier...",
+      "send": "Nachricht senden"
+    },
+    "toast": {
+      "sent": {
+        "title": "Nachricht gesendet!",
+        "description": "Ihre Nachricht wird am Antipoden-Standort gefunden."
+      },
+      "notFound": {
+        "title": "Keine Nachricht gefunden",
+        "description": "An diesem Standort gibt es keine Nachrichten. Warum hinterlassen Sie nicht eine?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Geolokalisierung nicht unterstützt",
+        "description": "Ihr Browser unterstützt keine Geolokalisierung"
+      },
+      "error": {
+        "title": "Standortfehler",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Fehler bei der Berechnung des Antipoden",
+      "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "Ungültiger Breitengrad",
+        "description": "Der Breitengrad muss zwischen -90 und 90 Grad liegen"
+      },
+      "invalidLongitude": {
+        "title": "Ungültiger Längengrad",
+        "description": "Der Längengrad muss zwischen -180 und 180 Grad liegen"
+      },
+      "invalid": {
+        "title": "Ungültige Koordinaten",
+        "description": "Bitte überprüfen Sie Ihre Koordinaten"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "Geocodierung fehlgeschlagen",
+        "description": "Koordinaten für diese Adresse konnten nicht gefunden werden"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "Standort nicht gefunden",
+        "description": "Bitte versuchen Sie einen anderen Suchbegriff"
+      },
+      "failed": {
+        "title": "Suche fehlgeschlagen",
+        "description": "{{message}}"
+      }
+    }
+  }
+} 

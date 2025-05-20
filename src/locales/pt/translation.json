@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "O outro lado do mundo, aqui"
+  },
+  "location": {
+    "original": "Localização Original",
+    "antipode": "Localização Antípoda",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Oceano Índico (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "coordinates": "Inserir Coordenadas",
+    "address": "Inserir Endereço",
+    "place": "Buscar por Lugar",
+    "postal": "Buscar por Código Postal",
+    "landmark": "Buscar por Ponto de Referência",
+    "useMyLocation": "Usar Minha Localização",
+    "gettingLocation": "Obtendo sua localização...",
+    "latitude": {
+      "label": "Inserir Latitude",
+      "placeholder": "Intervalo: -90 a 90° (padrão: Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Inserir Longitude",
+      "placeholder": "Intervalo: -180 a 180° (padrão: Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Mensagem na Garrafa",
+    "description": "Deixe uma mensagem que só poderá ser encontrada no lado oposto do mundo, ou verifique se há uma mensagem esperando por você aqui.",
+    "leaveMessage": "Deixar uma Mensagem",
+    "checkMessages": "Verificar Mensagens",
+    "modal": {
+      "title": "Deixar uma Mensagem",
+      "discoverableAt": "Sua mensagem será descoberta em:",
+      "placeholder": "Escreva sua mensagem aqui...",
+      "send": "Enviar Mensagem"
+    },
+    "toast": {
+      "sent": {
+        "title": "Mensagem enviada!",
+        "description": "Sua mensagem será descoberta na localização antípoda."
+      },
+      "notFound": {
+        "title": "Nenhuma mensagem encontrada",
+        "description": "Não há mensagens nesta localização. Por que não deixar uma?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Geolocalização não suportada",
+        "description": "Seu navegador não suporta geolocalização"
+      },
+      "error": {
+        "title": "Erro de localização",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Erro ao calcular antípoda",
+      "description": "{{message}}"
+    }
+  }
+} 

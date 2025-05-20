@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "世界的另一端，就在这里"
+  },
+  "location": {
+    "original": "原始位置",
+    "antipode": "对跖点位置",
+    "defaultLocation": "洛杉矶，加利福尼亚州 (34.0522°, -118.2437°)",
+    "defaultAntipode": "印度洋 (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "coordinates": "输入坐标",
+    "address": "输入地址",
+    "place": "按地点搜索",
+    "postal": "按邮政编码搜索",
+    "landmark": "按地标搜索",
+    "useMyLocation": "使用我的位置",
+    "gettingLocation": "正在获取您的位置...",
+    "latitude": {
+      "label": "输入纬度",
+      "placeholder": "范围：-90至90°（默认：洛杉矶：34.0522）"
+    },
+    "longitude": {
+      "label": "输入经度",
+      "placeholder": "范围：-180至180°（默认：洛杉矶：-118.2437）"
+    }
+  },
+  "messages": {
+    "title": "漂流瓶",
+    "description": "留下一个只能在世界另一端被发现的讯息，或查看是否有讯息在这里等待您。",
+    "leaveMessage": "留下讯息",
+    "checkMessages": "查看讯息",
+    "modal": {
+      "title": "留下讯息",
+      "discoverableAt": "您的讯息将在这里被发现：",
+      "placeholder": "在此处写下您的讯息...",
+      "send": "发送讯息"
+    },
+    "toast": {
+      "sent": {
+        "title": "讯息已发送！",
+        "description": "您的讯息将在对跖点位置被发现。"
+      },
+      "notFound": {
+        "title": "未找到讯息",
+        "description": "此位置没有讯息。为什么不留下一个呢？"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "不支持地理位置",
+        "description": "您的浏览器不支持地理位置功能"
+      },
+      "error": {
+        "title": "位置错误",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "计算对跖点时出错",
+      "description": "{{message}}"
+    }
+  }
+} 

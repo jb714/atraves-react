@@ -1,26 +1,17 @@
-import { Heading, Text, VStack, Box } from "@chakra-ui/react"
+import { Box, Heading, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
-    return (
-        <Box pt={[4, 6, 8]}>
-            <VStack spacing={[1, 2]} mb={[4, 6, 8]}>
-                <Heading 
-                    as="h1" 
-                    size={["xl", "2xl", "3xl"]}
-                    textAlign="center"
-                >
-                    Através
-                </Heading>
-                <Text 
-                    fontSize={["md", "lg", "xl"]} 
-                    color="gray.600"
-                    textAlign="center"
-                >
-                    The other side of the world, here
-                </Text>
-            </VStack>
-        </Box>
-    )
-}
+  const { t } = useTranslation();
 
-export default Header
+  return (
+    <Box as="header" p={4} bg="white">
+      <Box maxW="1200px" mx="auto" textAlign="center">
+        <Heading size="lg">{t('header.title')}</Heading>
+        <Text color="gray.600">{t('header.subtitle')}</Text>
+      </Box>
+    </Box>
+  );
+};
+
+export default Header;

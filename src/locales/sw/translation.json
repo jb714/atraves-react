@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "Upande wa pili wa dunia, hapa"
+  },
+  "location": {
+    "original": "Mahali Asilia",
+    "antipode": "Mahali Kinyume",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Bahari ya Hindi (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "useMyLocation": "Tumia Mahali Pangu",
+    "gettingLocation": "Inapata mahali pako...",
+    "coordinates": {
+      "label": "Weka Kuratibu",
+      "placeholder": "Tumia sehemu za kuratibu zilizopo hapa chini"
+    },
+    "address": {
+      "label": "Weka Anwani",
+      "placeholder": "mfano, Barabara Kuu 123, Jiji, Nchi"
+    },
+    "place": {
+      "label": "Tafuta kwa Mahali",
+      "placeholder": "mfano, Mnara wa Eiffel, Sanamu ya Uhuru"
+    },
+    "postal": {
+      "label": "Tafuta kwa Msimbo wa Posta",
+      "placeholder": "mfano, 90210, SW1A 1AA"
+    },
+    "landmark": {
+      "label": "Tafuta kwa Alama ya Kijiografia",
+      "placeholder": "mfano, Bonde Kubwa, Mlima Everest"
+    },
+    "latitude": {
+      "label": "Weka Latitudo",
+      "placeholder": "Mbalimbali: -90 hadi 90° (chaguo-msingi: Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Weka Longitudo",
+      "placeholder": "Mbalimbali: -180 hadi 180° (chaguo-msingi: Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Ujumbe kwenye Chupa",
+    "description": "Acha ujumbe ambao unaweza kupatikana tu upande wa pili wa dunia, au angalia kama kuna ujumbe unakungojea hapa.",
+    "leaveMessage": "Acha Ujumbe",
+    "checkMessages": "Angalia Ujumbe",
+    "location": {
+      "updated": {
+        "title": "Mahali pamebadilishwa",
+        "description": "Mahali pako cha sasa pamewekwa"
+      }
+    },
+    "modal": {
+      "title": "Acha Ujumbe",
+      "discoverableAt": "Ujumbe wako utapatikana kwenye:",
+      "placeholder": "Andika ujumbe wako hapa...",
+      "send": "Tuma Ujumbe"
+    },
+    "toast": {
+      "sent": {
+        "title": "Ujumbe umetumwa!",
+        "description": "Ujumbe wako utapatikana kwenye mahali kinyume."
+      },
+      "notFound": {
+        "title": "Hakuna ujumbe uliopatikana",
+        "description": "Hakuna ujumbe kwenye mahali hii. Kwa nini usiacha mmoja?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Mahali haipatikani",
+        "description": "Kivinjari chako hakina uwezo wa kupata mahali"
+      },
+      "error": {
+        "title": "Hitilafu ya mahali",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Hitilafu katika kuhesabu mahali kinyume",
+      "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "Latitudo batili",
+        "description": "Latitudo lazima iwe kati ya -90 na 90 digrii"
+      },
+      "invalidLongitude": {
+        "title": "Longitudo batili",
+        "description": "Longitudo lazima iwe kati ya -180 na 180 digrii"
+      },
+      "invalid": {
+        "title": "Kuratibu batili",
+        "description": "Tafadhali angalia kuratibu zako"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "Kupata kuratibu kumeshindwa",
+        "description": "Haiwezekani kupata kuratibu kwa anwani hii"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "Mahali hapapatikani",
+        "description": "Tafadhali jaribu neno lingine la kutafuta"
+      },
+      "failed": {
+        "title": "Utafutaji umeshindwa",
+        "description": "{{message}}"
+      }
+    }
+  }
+} 

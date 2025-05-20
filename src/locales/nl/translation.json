@@ -1,0 +1,67 @@
+{
+  "header": {
+    "title": "Através",
+    "subtitle": "De andere kant van de wereld, hier"
+  },
+  "location": {
+    "original": "Originele Locatie",
+    "antipode": "Antipode Locatie",
+    "defaultLocation": "Los Angeles, CA (34.0522°, -118.2437°)",
+    "defaultAntipode": "Indische Oceaan (-34.0522°, 61.7563°)"
+  },
+  "input": {
+    "coordinates": "Voer Coördinaten In",
+    "address": "Voer Adres In",
+    "place": "Zoek op Plaats",
+    "postal": "Zoek op Postcode",
+    "landmark": "Zoek op Bezienswaardigheid",
+    "useMyLocation": "Gebruik Mijn Locatie",
+    "gettingLocation": "Locatie ophalen...",
+    "latitude": {
+      "label": "Voer Breedtegraad In",
+      "placeholder": "Bereik: -90 tot 90° (standaard: Los Angeles: 34.0522)"
+    },
+    "longitude": {
+      "label": "Voer Lengtegraad In",
+      "placeholder": "Bereik: -180 tot 180° (standaard: Los Angeles: -118.2437)"
+    }
+  },
+  "messages": {
+    "title": "Brief in een Fles",
+    "description": "Laat een bericht achter dat alleen aan de andere kant van de wereld gevonden kan worden, of controleer of er een bericht op je wacht hier.",
+    "leaveMessage": "Laat een Bericht Achter",
+    "checkMessages": "Controleer Berichten",
+    "modal": {
+      "title": "Laat een Bericht Achter",
+      "discoverableAt": "Je bericht zal hier gevonden worden:",
+      "placeholder": "Schrijf je bericht hier...",
+      "send": "Verstuur Bericht"
+    },
+    "toast": {
+      "sent": {
+        "title": "Bericht verzonden!",
+        "description": "Je bericht zal op de antipode locatie gevonden worden."
+      },
+      "notFound": {
+        "title": "Geen bericht gevonden",
+        "description": "Er zijn geen berichten op deze locatie. Waarom laat je er niet een achter?"
+      }
+    }
+  },
+  "errors": {
+    "geolocation": {
+      "notSupported": {
+        "title": "Geolocatie niet ondersteund",
+        "description": "Je browser ondersteunt geen geolocatie"
+      },
+      "error": {
+        "title": "Locatiefout",
+        "description": "{{message}}"
+      }
+    },
+    "antipode": {
+      "title": "Fout bij het berekenen van de antipode",
+      "description": "{{message}}"
+    }
+  }
+} 
