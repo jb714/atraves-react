@@ -3,6 +3,7 @@ import Map from "./Map"
 import LocationInputContainer from "./LocationInputContainer"
 import { calculateAntipode } from "../utils/locationUtils"
 import { useToast } from "@chakra-ui/react"
+import { Grid, GridItem, Text, Box } from "@chakra-ui/react"
 
 const MapsSection = () => {
     const [latitude, setLatitude] = useState('')
@@ -15,7 +16,7 @@ const MapsSection = () => {
         const lat = parseFloat(latitude)
         const lng = parseFloat(longitude)
         
-        // Return default coordinates (Los Angeles) if coordinates are invalid
+        // Return default coordinates (Los Angeles)
         if (isNaN(lat) || isNaN(lng)) {
             return { lat: 34.0522, lng: -118.2437 }
         }
@@ -38,30 +39,60 @@ const MapsSection = () => {
                 duration: 3000,
                 isClosable: true,
             })
-            // Return default coordinates if calculation fails
-            return { lat: -34.0522, lng: 61.7563 } // Antipode of Los Angeles
+            // Return default antipode coordinates (Antipode of Los Angeles)
+            return { lat: -34.0522, lng: 61.7563 }
         }
     }
 
     const antipodeCoordinates = getAntipodeCoordinates()
 
     return (
-        <div>
-            <div id="UserMap" className="map-container">
-                <LocationInputContainer 
-                    latitude={latitude}
-                    setLatitude={setLatitude}
-                    longitude={longitude}
-                    setLongitude={setLongitude}
-                    address={address}
-                    setAddress={setAddress}
-                />
-                <Map lat={coordinates.lat} lng={coordinates.lng}/>
-            </div>
-            <div id="AntipodeMap" className="map-container">
-                <Map lat={antipodeCoordinates.lat} lng={antipodeCoordinates.lng}/>
-            </div>
-        </div>
+        <Box px={[2, 4, 6]}>
+            <LocationInputContainer 
+                latitude={latitude}
+                setLatitude={setLatitude}
+                longitude={longitude}
+                setLongitude={setLongitude}
+                address={address}
+                setAddress={setAddress}
+            />
+            <Box my={[4, 6, 8]} />
+            <Grid 
+                templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]} 
+                gap={[2, 4, 6]}
+            >
+                <GridItem>
+                    <Box mb={2}>
+                        <Text fontSize={["md", "lg"]} fontWeight="medium">
+                            Original Location
+                        </Text>
+                        <Text fontSize={["xs", "sm"]} color="gray.600">
+                            {latitude && longitude ? 
+                                `(${parseFloat(latitude).toFixed(4)}°, ${parseFloat(longitude).toFixed(4)}°)` : 
+                                "Los Angeles, CA (34.0522°, -118.2437°)"}
+                        </Text>
+                    </Box>
+                    <div id="UserMap" className="map-container">
+                        <Map lat={coordinates.lat} lng={coordinates.lng}/>
+                    </div>
+                </GridItem>
+                <GridItem>
+                    <Box mb={2}>
+                        <Text fontSize={["md", "lg"]} fontWeight="medium">
+                            Antipode Location
+                        </Text>
+                        <Text fontSize={["xs", "sm"]} color="gray.600">
+                            {latitude && longitude ? 
+                                `(${antipodeCoordinates.lat.toFixed(4)}°, ${antipodeCoordinates.lng.toFixed(4)}°)` : 
+                                "Indian Ocean (-34.0522°, 61.7563°)"}
+                        </Text>
+                    </Box>
+                    <div id="AntipodeMap" className="map-container">
+                        <Map lat={antipodeCoordinates.lat} lng={antipodeCoordinates.lng}/>
+                    </div>
+                </GridItem>
+            </Grid>
+        </Box>
     )
 }
 
