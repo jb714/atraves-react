@@ -124,5 +124,11 @@
         "description": "{{message}}"
       }
     }
+  },
+  "footer": {
+    "title": "Através",
+    "subtitle": "The other side of the world, here",
+    "contact": "Contact Us: Report Bugs / Feature Requests",
+    "about": "About Através"
   }
 } 
