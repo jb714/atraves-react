@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Messages collection
+    match /messages/{messageId} {
+      // Allow reading messages
+      allow read: if true;
+      
+      // Allow creating messages with validation
+      allow create: if 
+        // Message content must exist and be a string
+        request.resource.data.content is string &&
+        // Content length between 1 and 1000 characters
+        request.resource.data.content.size() >= 1 &&
+        request.resource.data.content.size() <= 1000 &&
+        // Location must exist and be valid
+        request.resource.data.location is map &&
+        request.resource.data.location.lat is number &&
+        request.resource.data.location.lng is number &&
+        // Timestamp must exist
+        request.resource.data.timestamp is timestamp;
+      
+      // No updates or deletes allowed
+      allow update, delete: if false;
+    }
+  }
+} 

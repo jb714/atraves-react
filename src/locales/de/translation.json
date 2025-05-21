@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Flaschenpost",
-    "description": "Hinterlassen Sie eine Nachricht, die nur auf der anderen Seite der Welt gefunden werden kann, oder prüfen Sie, ob hier eine Nachricht auf Sie wartet.",
+    "description": "Hinterlasse eine Nachricht, die auf der anderen Seite der Welt entdeckt werden kann, oder prüfe, ob an diesem Ort eine Nachricht auf dich wartet.",
     "leaveMessage": "Nachricht hinterlassen",
     "checkMessages": "Nachrichten prüfen",
     "location": {
@@ -67,7 +67,11 @@
         "title": "Keine Nachricht gefunden",
         "description": "An diesem Standort gibt es keine Nachrichten. Warum hinterlassen Sie nicht eine?"
       }
-    }
+    },
+    "noMessages": "Keine Nachrichten an diesem Ort gefunden. Hinterlasse eine Nachricht, die auf der anderen Seite der Welt entdeckt werden kann!",
+    "fromAntipode": "Gesendet von der anderen Seite der Welt",
+    "messagesSeenFromOriginal": "Nachrichten vom Ursprungsort aus gesehen",
+    "messagesSeenAtAntipode": "Nachrichten am Antipodenstandort gesehen"
   },
   "errors": {
     "geolocation": {

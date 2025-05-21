@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Mensaje en una Botella",
-    "description": "Deja un mensaje que solo se podrá encontrar en el lado opuesto del mundo, o verifica si hay un mensaje esperándote aquí.",
+    "description": "Deja un mensaje que será descubierto en el otro lado del mundo, o revisa si hay un mensaje esperándote en esta ubicación.",
     "leaveMessage": "Dejar un Mensaje",
     "checkMessages": "Buscar Mensajes",
     "location": {
@@ -67,7 +67,11 @@
         "title": "No se encontraron mensajes",
         "description": "No hay mensajes en esta ubicación. ¿Por qué no dejar uno?"
       }
-    }
+    },
+    "noMessages": "No se encontraron mensajes en esta ubicación. ¡Deja un mensaje para que sea descubierto en el otro lado del mundo!",
+    "fromAntipode": "Enviado desde el otro lado del mundo",
+    "messagesSeenFromOriginal": "Mensajes vistos desde la ubicación original",
+    "messagesSeenAtAntipode": "Mensajes vistos en la ubicación antipodal"
   },
   "errors": {
     "geolocation": {

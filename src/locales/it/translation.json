@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "Messaggio nella Bottiglia",
-    "description": "Lascia un messaggio che potrà essere trovato solo dall'altra parte del mondo, o controlla se c'è un messaggio che ti aspetta qui.",
+    "description": "Lascia un messaggio che sarà scoperto dall'altra parte del mondo, oppure controlla se c'è un messaggio che ti aspetta in questa posizione.",
     "leaveMessage": "Lascia un Messaggio",
     "checkMessages": "Controlla i Messaggi",
     "modal": {
@@ -46,7 +46,11 @@
         "title": "Nessun messaggio trovato",
         "description": "Non ci sono messaggi in questa posizione. Perché non lasciarne uno?"
       }
-    }
+    },
+    "noMessages": "Nessun messaggio trovato in questa posizione. Lascia un messaggio da scoprire dall'altra parte del mondo!",
+    "fromAntipode": "Inviato dall'altra parte del mondo",
+    "messagesSeenFromOriginal": "Messaggi visti dalla posizione originale",
+    "messagesSeenAtAntipode": "Messaggi visti nella posizione antipodale"
   },
   "errors": {
     "geolocation": {

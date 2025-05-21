@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Map from "./Map"
 import LocationInputContainer from "./LocationInputContainer"
-import Comments from "./Comments"
+import Messages from "./Messages"
 import { calculateAntipode } from "../utils/locationUtils"
 import { useToast } from "@chakra-ui/react"
 import { Grid, GridItem, Text, Box } from "@chakra-ui/react"
@@ -95,7 +95,7 @@ const ContentWrapper = () => {
                     </div>
                 </GridItem>
             </Grid>
-            <Comments 
+            <Messages 
                 currentLat={coordinates.lat}
                 currentLng={coordinates.lng}
                 antipodeLat={antipodeCoordinates.lat}

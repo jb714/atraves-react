@@ -43,9 +43,16 @@
   },
   "messages": {
     "title": "Message in a Bottle",
-    "description": "Leave a message that can only be found at the opposite side of the world, or check if there's a message waiting for you here.",
+    "description": "Leave a message that will be discoverable on the other side of the world, or check if there's a message waiting for you at this location.",
     "leaveMessage": "Leave a Message",
     "checkMessages": "Check for Messages",
+    "fromAntipode": "Sent from the other side of the world",
+    "noMessages": "No messages found at this location. Leave a message to be discovered on the other side of the world!",
+    "error": {
+      "title": "Error",
+      "loading": "Failed to load messages. Please try again.",
+      "sending": "Failed to send message. Please try again."
+    },
     "location": {
       "updated": {
         "title": "Location updated",
@@ -67,7 +74,9 @@
         "title": "No messages found",
         "description": "There are no messages at this location. Why not leave one?"
       }
-    }
+    },
+    "messagesSeenFromOriginal": "Messages as seen from Original Location",
+    "messagesSeenAtAntipode": "Messages as seen at Antipode Location"
   },
   "errors": {
     "geolocation": {

@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "瓶の中のメッセージ",
-    "description": "世界の反対側でのみ見つかるメッセージを残すか、ここで待っているメッセージがあるか確認してください。",
+    "description": "世界の反対側で見つけられるメッセージを残すか、この場所であなたを待っているメッセージがあるか確認しましょう。",
     "leaveMessage": "メッセージを残す",
     "checkMessages": "メッセージを確認",
     "location": {
@@ -67,7 +67,11 @@
         "title": "メッセージが見つかりません",
         "description": "この位置にはメッセージがありません。メッセージを残してみませんか？"
       }
-    }
+    },
+    "noMessages": "この場所にはメッセージがありません。世界の反対側で見つけられるメッセージを残しましょう！",
+    "fromAntipode": "世界の反対側から送信されました",
+    "messagesSeenFromOriginal": "元の場所から見たメッセージ",
+    "messagesSeenAtAntipode": "反対側の場所で見たメッセージ"
   },
   "errors": {
     "geolocation": {

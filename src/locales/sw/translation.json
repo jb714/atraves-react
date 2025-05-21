@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Ujumbe kwenye Chupa",
-    "description": "Acha ujumbe ambao unaweza kupatikana tu upande wa pili wa dunia, au angalia kama kuna ujumbe unakungojea hapa.",
+    "description": "Lämna ett meddelande som kan upptäckas på andra sidan jorden, eller se om det finns ett meddelande som väntar på dig här.",
     "leaveMessage": "Acha Ujumbe",
     "checkMessages": "Angalia Ujumbe",
     "location": {
@@ -67,7 +67,11 @@
         "title": "Hakuna ujumbe uliopatikana",
         "description": "Hakuna ujumbe kwenye mahali hii. Kwa nini usiacha mmoja?"
       }
-    }
+    },
+    "noMessages": "Inga meddelanden hittades på denna plats. Lämna ett meddelande som kan upptäckas på andra sidan jorden!",
+    "fromAntipode": "Skickat från andra sidan jorden",
+    "messagesSeenFromOriginal": "Meddelanden sedda från ursprungsplatsen",
+    "messagesSeenAtAntipode": "Meddelanden sedda vid antipodplatsen"
   },
   "errors": {
     "geolocation": {

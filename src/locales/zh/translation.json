@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "漂流瓶",
-    "description": "留下一个只能在世界另一端被发现的讯息，或查看是否有讯息在这里等待您。",
+    "description": "留下一个可以在世界另一端被发现的消息，或查看此位置是否有消息在等你。",
     "leaveMessage": "留下讯息",
     "checkMessages": "查看讯息",
     "modal": {
@@ -46,7 +46,11 @@
         "title": "未找到讯息",
         "description": "此位置没有讯息。为什么不留下一个呢？"
       }
-    }
+    },
+    "noMessages": "此位置没有找到消息。留下一个可以在世界另一端被发现的消息吧！",
+    "fromAntipode": "来自世界另一端",
+    "messagesSeenFromOriginal": "从原始位置看到的消息",
+    "messagesSeenAtAntipode": "在对跖点位置看到的消息"
   },
   "errors": {
     "geolocation": {

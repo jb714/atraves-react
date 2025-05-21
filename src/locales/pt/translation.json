@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "Mensagem na Garrafa",
-    "description": "Deixe uma mensagem que só poderá ser encontrada no lado oposto do mundo, ou verifique se há uma mensagem esperando por você aqui.",
+    "description": "Deixe uma mensagem que será descoberta do outro lado do mundo, ou veja se há uma mensagem esperando por você neste local.",
     "leaveMessage": "Deixar uma Mensagem",
     "checkMessages": "Verificar Mensagens",
     "modal": {
@@ -46,7 +46,11 @@
         "title": "Nenhuma mensagem encontrada",
         "description": "Não há mensagens nesta localização. Por que não deixar uma?"
       }
-    }
+    },
+    "noMessages": "Nenhuma mensagem encontrada neste local. Deixe uma mensagem para ser descoberta do outro lado do mundo!",
+    "fromAntipode": "Enviado do outro lado do mundo",
+    "messagesSeenFromOriginal": "Mensagens vistas da localização original",
+    "messagesSeenAtAntipode": "Mensagens vistas na localização antipodal"
   },
   "errors": {
     "geolocation": {
