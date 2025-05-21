@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "Mensagem na Garrafa",
-    "description": "Deixe uma mensagem que será descoberta do outro lado do mundo, ou veja se há uma mensagem esperando por você neste local.",
+    "description": "Deixe uma mensagem que será descoberta do outro lado do mundo, ou veja se há uma mensagem esperando por você neste local. (Para sua privacidade, as mensagens só são visíveis dentro de uma área de 100 km. Sua localização exata nunca é armazenada ou compartilhada.)",
     "leaveMessage": "Deixar uma Mensagem",
     "checkMessages": "Verificar Mensagens",
     "modal": {
@@ -50,7 +50,8 @@
     "noMessages": "Nenhuma mensagem encontrada neste local. Deixe uma mensagem para ser descoberta do outro lado do mundo!",
     "fromAntipode": "Enviado do outro lado do mundo",
     "messagesSeenFromOriginal": "Mensagens vistas da localização original",
-    "messagesSeenAtAntipode": "Mensagens vistas na localização antipodal"
+    "messagesSeenAtAntipode": "Mensagens vistas na localização antipodal",
+    "privacyNote": "Para sua privacidade, as mensagens só são visíveis dentro de uma área de 100 km. Sua localização exata nunca é armazenada ou compartilhada."
   },
   "errors": {
     "geolocation": {

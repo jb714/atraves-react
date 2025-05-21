@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Message in a Bottle",
-    "description": "Leave a message that will be discoverable on the other side of the world, or check if there's a message waiting for you at this location.",
+    "description": "Leave a message that will be discoverable on the other side of the world, or check if there's a message waiting for you at this location. (For your privacy, messages are only discoverable within a 100 km area. Your exact location is never stored or shared.)",
     "leaveMessage": "Leave a Message",
     "checkMessages": "Check for Messages",
     "fromAntipode": "Sent from the other side of the world",
@@ -76,7 +76,8 @@
       }
     },
     "messagesSeenFromOriginal": "Messages as seen from Original Location",
-    "messagesSeenAtAntipode": "Messages as seen at Antipode Location"
+    "messagesSeenAtAntipode": "Messages as seen at Antipode Location",
+    "privacyNote": "For your privacy, messages are only discoverable within a 100 km area. Your exact location is never stored or shared."
   },
   "errors": {
     "geolocation": {

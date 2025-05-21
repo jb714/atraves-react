@@ -71,7 +71,8 @@
     "noMessages": "No se encontraron mensajes en esta ubicación. ¡Deja un mensaje para que sea descubierto en el otro lado del mundo!",
     "fromAntipode": "Enviado desde el otro lado del mundo",
     "messagesSeenFromOriginal": "Mensajes vistos desde la ubicación original",
-    "messagesSeenAtAntipode": "Mensajes vistos en la ubicación antipodal"
+    "messagesSeenAtAntipode": "Mensajes vistos en la ubicación antipodal",
+    "privacyNote": "Por tu privacidad, los mensajes solo son visibles dentro de un área de 100 km. Tu ubicación exacta nunca se almacena ni se comparte."
   },
   "errors": {
     "geolocation": {

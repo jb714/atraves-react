@@ -122,7 +122,6 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                 <Text fontSize="sm" color="gray.600">
                     {t('messages.description')}
                 </Text>
-
                 <RadioGroup
                     onChange={setShowAntipode}
                     value={showAntipode}

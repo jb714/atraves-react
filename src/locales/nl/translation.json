@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "Brief in een Fles",
-    "description": "Laat een bericht achter dat aan de andere kant van de wereld gevonden kan worden, of kijk of er een bericht op je wacht op deze locatie.",
+    "description": "Laat een bericht achter dat aan de andere kant van de wereld gevonden kan worden, of kijk of er een bericht op je wacht op deze locatie. (Voor uw privacy zijn berichten alleen zichtbaar binnen een straal van 100 km. Uw exacte locatie wordt nooit opgeslagen of gedeeld.)",
     "leaveMessage": "Laat een Bericht Achter",
     "checkMessages": "Controleer Berichten",
     "modal": {
@@ -50,7 +50,8 @@
     "noMessages": "Geen berichten gevonden op deze locatie. Laat een bericht achter om aan de andere kant van de wereld gevonden te worden!",
     "fromAntipode": "Verzonden vanaf de andere kant van de wereld",
     "messagesSeenFromOriginal": "Berichten gezien vanaf de oorspronkelijke locatie",
-    "messagesSeenAtAntipode": "Berichten gezien op de antipodale locatie"
+    "messagesSeenAtAntipode": "Berichten gezien op de antipodale locatie",
+    "privacyNote": "Voor uw privacy zijn berichten alleen zichtbaar binnen een straal van 100 km. Uw exacte locatie wordt nooit opgeslagen of gedeeld."
   },
   "errors": {
     "geolocation": {

@@ -45,17 +45,32 @@ function getBoundingBox(lat: number, lng: number, radiusKm: number) {
     };
 }
 
+// Helper to offset lat/lng by up to ±5km
+function offsetLatLng(lat: number, lng: number, maxOffsetKm = 5) {
+    const earthRadius = 6371; // km
+    // Random distance in km (0 to maxOffsetKm)
+    const distance = Math.random() * maxOffsetKm;
+    // Random bearing in radians
+    const bearing = Math.random() * 2 * Math.PI;
+    // Offset latitude
+    const offsetLat = lat + (distance / earthRadius) * (180 / Math.PI) * Math.cos(bearing);
+    // Offset longitude
+    const offsetLng = lng + (distance / earthRadius) * (180 / Math.PI) / Math.cos(lat * Math.PI / 180) * Math.sin(bearing);
+    return { lat: offsetLat, lng: offsetLng };
+}
+
 // Create a new message
 export const createMessage = async (messageInput: MessageInput): Promise<string> => {
     try {
-        console.log('Creating message:', messageInput);
+        // Offset the location for privacy
+        const offset = offsetLatLng(messageInput.location.lat, messageInput.location.lng);
+        console.log('Creating message (offset location):', offset);
         const docRef = await addDoc(messagesCollection, {
             ...messageInput,
             timestamp: Timestamp.now(),
-            // Store both GeoPoint and separate lat/lng fields
-            location: new GeoPoint(messageInput.location.lat, messageInput.location.lng),
-            locationLat: messageInput.location.lat,
-            locationLng: messageInput.location.lng
+            location: new GeoPoint(offset.lat, offset.lng),
+            locationLat: offset.lat,
+            locationLng: offset.lng
         });
         console.log('Message created with ID:', docRef.id);
         return docRef.id;
@@ -82,33 +97,36 @@ export const createMessagesAtBothLocations = async (
         });
 
         const batch = writeBatch(db);
-        
+        // Offset both locations
+        const offsetCurrent = offsetLatLng(currentLocation.lat, currentLocation.lng);
+        const offsetAntipode = offsetLatLng(antipodeLocation.lat, antipodeLocation.lng);
+
         // Create message at current location
         const currentDocRef = doc(messagesCollection);
         const currentMessageData = {
             content: message,
-            location: new GeoPoint(currentLocation.lat, currentLocation.lng),
-            locationLat: currentLocation.lat,
-            locationLng: currentLocation.lng,
+            location: new GeoPoint(offsetCurrent.lat, offsetCurrent.lng),
+            locationLat: offsetCurrent.lat,
+            locationLng: offsetCurrent.lng,
             timestamp: Timestamp.now(),
             language,
             isAntipode: false
         };
-        console.log('Creating message at current location:', currentMessageData);
+        console.log('Creating message at current location (offset):', currentMessageData);
         batch.set(currentDocRef, currentMessageData);
 
         // Create message at antipode
         const antipodeDocRef = doc(messagesCollection);
         const antipodeMessageData = {
             content: message,
-            location: new GeoPoint(antipodeLocation.lat, antipodeLocation.lng),
-            locationLat: antipodeLocation.lat,
-            locationLng: antipodeLocation.lng,
+            location: new GeoPoint(offsetAntipode.lat, offsetAntipode.lng),
+            locationLat: offsetAntipode.lat,
+            locationLng: offsetAntipode.lng,
             timestamp: Timestamp.now(),
             language,
             isAntipode: true
         };
-        console.log('Creating message at antipode:', antipodeMessageData);
+        console.log('Creating message at antipode (offset):', antipodeMessageData);
         batch.set(antipodeDocRef, antipodeMessageData);
 
         // Commit both writes in a single batch
@@ -130,8 +148,8 @@ export const createMessagesAtBothLocations = async (
 
 // Get messages near a location
 export const getMessagesNearLocation = async (queryParams: MessageQuery): Promise<Message[]> => {
-    // Increase radius for debugging
-    const { location, radius = 20, limit: limitCount = 10 } = queryParams;
+    // Default radius to 100km
+    const { location, radius = 100, limit: limitCount = 10 } = queryParams;
     try {
         console.log('Getting messages near location:', location);
         const cacheKey = `${location.lat.toFixed(4)}_${location.lng.toFixed(4)}_${radius}_${limitCount}`;

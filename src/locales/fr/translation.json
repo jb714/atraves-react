@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Message dans une Bouteille",
-    "description": "Laissez un message qui sera découvert de l'autre côté du monde, ou vérifiez s'il y a un message qui vous attend à cet endroit.",
+    "description": "Laissez un message qui sera découvert de l'autre côté du monde, ou vérifiez s'il y a un message qui vous attend à cet endroit. (Pour votre confidentialité, les messages ne sont visibles que dans une zone de 100 km. Votre position exacte n'est jamais stockée ni partagée.)",
     "leaveMessage": "Laisser un Message",
     "checkMessages": "Vérifier les Messages",
     "location": {
@@ -71,7 +71,8 @@
     "noMessages": "Aucun message trouvé à cet endroit. Laissez un message pour qu'il soit découvert de l'autre côté du monde !",
     "fromAntipode": "Envoyé de l'autre côté du monde",
     "messagesSeenFromOriginal": "Messages vus depuis l'emplacement d'origine",
-    "messagesSeenAtAntipode": "Messages vus à l'emplacement antipodal"
+    "messagesSeenAtAntipode": "Messages vus à l'emplacement antipodal",
+    "privacyNote": "Pour votre confidentialité, les messages ne sont visibles que dans une zone de 100 km. Votre position exacte n'est jamais stockée ni partagée."
   },
   "errors": {
     "geolocation": {

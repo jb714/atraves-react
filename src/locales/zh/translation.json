@@ -28,7 +28,7 @@
   },
   "messages": {
     "title": "漂流瓶",
-    "description": "留下一个可以在世界另一端被发现的消息，或查看此位置是否有消息在等你。",
+    "description": "留下一个可以在世界另一端被发现的消息，或查看此位置是否有消息在等你。（为了您的隐私，消息仅在100公里范围内可见。您的精确位置绝不会被存储或共享。）",
     "leaveMessage": "留下讯息",
     "checkMessages": "查看讯息",
     "modal": {
@@ -50,7 +50,8 @@
     "noMessages": "此位置没有找到消息。留下一个可以在世界另一端被发现的消息吧！",
     "fromAntipode": "来自世界另一端",
     "messagesSeenFromOriginal": "从原始位置看到的消息",
-    "messagesSeenAtAntipode": "在对跖点位置看到的消息"
+    "messagesSeenAtAntipode": "在对跖点位置看到的消息",
+    "privacyNote": "为了您的隐私，消息仅在100公里范围内可见。您的精确位置绝不会被存储或共享。"
   },
   "errors": {
     "geolocation": {

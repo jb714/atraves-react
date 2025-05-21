@@ -43,7 +43,7 @@
   },
   "messages": {
     "title": "Ujumbe kwenye Chupa",
-    "description": "Lämna ett meddelande som kan upptäckas på andra sidan jorden, eller se om det finns ett meddelande som väntar på dig här.",
+    "description": "Lämna ett meddelande som kan upptäckas på andra sidan jorden, eller se om det finns ett meddelande som väntar på dig här. (För din integritet är meddelanden endast synliga inom ett område på 100 km. Din exakta plats lagras eller delas aldrig.)",
     "leaveMessage": "Acha Ujumbe",
     "checkMessages": "Angalia Ujumbe",
     "location": {
@@ -71,7 +71,8 @@
     "noMessages": "Inga meddelanden hittades på denna plats. Lämna ett meddelande som kan upptäckas på andra sidan jorden!",
     "fromAntipode": "Skickat från andra sidan jorden",
     "messagesSeenFromOriginal": "Meddelanden sedda från ursprungsplatsen",
-    "messagesSeenAtAntipode": "Meddelanden sedda vid antipodplatsen"
+    "messagesSeenAtAntipode": "Meddelanden sedda vid antipodplatsen",
+    "privacyNote": "För din integritet är meddelanden endast synliga inom ett område på 100 km. Din exakta plats lagras eller delas aldrig."
   },
   "errors": {
     "geolocation": {
