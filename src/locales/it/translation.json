@@ -68,5 +68,26 @@
       "title": "Errore nel calcolo dell'antipode",
       "description": "{{message}}"
     }
+  },
+  "footer": {
+    "about": "Informazioni su Através",
+    "contact": "Contattaci: Segnala bug / Richiedi funzionalità",
+    "aboutContent": "Através ti permette di esplorare il mondo attraverso gli opposti. Cerca qualsiasi località e trova istantaneamente la sua antipode - il punto esattamente opposto sulla Terra. Confronta luoghi, scopri curiosità e lascia o scopri messaggi lasciati da altri in queste località speculari. I messaggi sono visibili entro un raggio di 100 km per proteggere la privacy, e la tua posizione esatta non viene mai memorizzata o condivisa.",
+    "languagesTitle": "Lingue supportate:",
+    "craftedWith": "Creato con React, Firebase e lo spirito della meraviglia globale.",
+    "languages": [
+      "Inglese",
+      "Spagnolo",
+      "Francese",
+      "Tedesco",
+      "Italiano",
+      "Portoghese",
+      "Olandese",
+      "Russo",
+      "Giapponese",
+      "Coreano",
+      "Cinese",
+      "Svedese"
+    ]
   }
 } 

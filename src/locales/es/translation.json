@@ -119,5 +119,26 @@
         "description": "{{message}}"
       }
     }
+  },
+  "footer": {
+    "about": "Acerca de Através",
+    "contact": "Contáctanos: Informar errores / Sugerir mejoras",
+    "aboutContent": "Através te permite explorar el mundo a través de los opuestos. Busca cualquier ubicación y encuentra instantáneamente su antípoda - el punto exactamente opuesto en la Tierra. Compara lugares, descubre datos curiosos y deja o descubre mensajes dejados por otros en estas ubicaciones espejo. Los mensajes son visibles dentro de un radio de 100 km para proteger la privacidad, y tu ubicación exacta nunca se almacena ni se comparte.",
+    "languagesTitle": "Idiomas que soportamos:",
+    "craftedWith": "Creado con React, Firebase y el espíritu de la maravilla global.",
+    "languages": [
+      "Inglés",
+      "Español",
+      "Francés",
+      "Alemán",
+      "Italiano",
+      "Portugués",
+      "Neerlandés",
+      "Ruso",
+      "Japonés",
+      "Coreano",
+      "Chino",
+      "Sueco"
+    ]
   }
 } 

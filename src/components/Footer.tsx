@@ -6,20 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const supportedLanguages = [
-    "English",
-    "Español (Spanish)",
-    "Français (French)",
-    "Deutsch (German)",
-    "Italiano (Italian)",
-    "Português (Portuguese)",
-    "Nederlands (Dutch)",
-    "Русский (Russian)",
-    "日本語 (Japanese)",
-    "한국어 (Korean)",
-    "中文 (Chinese)",
-    "Svenska (Swedish)"
-  ];
+  const supportedLanguages = t('footer.languages', { returnObjects: true }) as string[];
 
   return (
     <Box as="footer" p={4} bg="white" borderTop="1px solid" borderColor="gray.200" left={0} right={0} bottom={0} zIndex={10}>
@@ -41,20 +28,20 @@ const Footer = () => {
           <ModalCloseButton />
           <ModalBody>
             <Text mb={2}>
-              Através lets you leave and discover messages at the antipode—the exact opposite point on Earth. Messages are discoverable within a 100 km area for privacy, and your exact location is never stored or shared.
+              {t('footer.aboutContent')}
             </Text>
             <Text mt={4} fontWeight="bold">
-              Languages we support:
+              {t('footer.languagesTitle')}
             </Text>
             <Box as="ul" pl={5} mb={2}>
-              {supportedLanguages.map(lang => (
-                <li key={lang}>
+              {supportedLanguages.map((lang: string, index: number) => (
+                <li key={index}>
                   <Text as="span" fontSize="sm">{lang}</Text>
                 </li>
               ))}
             </Box>
             <Text fontSize="sm" color="gray.500" mb={2}>
-              Built with React, Firebase, and love of connection across the globe.
+              {t('footer.craftedWith')}
             </Text>
           </ModalBody>
         </ModalContent>

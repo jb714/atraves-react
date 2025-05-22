@@ -119,5 +119,26 @@
         "description": "{{message}}"
       }
     }
+  },
+  "footer": {
+    "about": "Om Através",
+    "contact": "Kontakta oss: Rapportera buggar / Funktionsförslag",
+    "aboutContent": "Através låter dig utforska världen genom antipoder. Sök efter valfri plats och hitta direkt dess antipod - den exakt motsatta punkten på jorden. Jämför platser, upptäck intressanta fakta och lämna eller hitta meddelanden som andra har lämnat på dessa spegelplatser. Meddelanden är synliga inom en radie av 100 km för att skydda integriteten, och din exakta position lagras eller delas aldrig.",
+    "languagesTitle": "Språk som stöds:",
+    "craftedWith": "Skapad med React, Firebase och anden av global förundran.",
+    "languages": [
+      "Engelska",
+      "Spanska",
+      "Franska",
+      "Tyska",
+      "Italienska",
+      "Portugisiska",
+      "Nederländska",
+      "Ryska",
+      "Japanska",
+      "Koreanska",
+      "Kinesiska",
+      "Svenska"
+    ]
   }
 } 

@@ -128,7 +128,24 @@
   "footer": {
     "title": "Através",
     "subtitle": "The other side of the world, here",
-    "contact": "Contact Us: Report Bugs / Feature Requests",
-    "about": "About Através"
+    "contact": "Contact Us: Bug Reports / Feature Requests",
+    "about": "About Através",
+    "aboutContent": "Através lets you explore the world through opposites. Search any location and instantly find its antipode - the exact opposite point on Earth. Compare places, discover fun facts and leave or uncover messages left by others at these mirrored locations. Messages are visible within a 100 km radius to protect privacy, and your exact location is never stored or shared.",
+    "languagesTitle": "Languages we support:",
+    "craftedWith": "Crafted with React, Firebase, and the spirit of global wonder.",
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Dutch",
+      "Russian",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Swedish"
+    ]
   }
 } 

@@ -68,5 +68,26 @@
       "title": "Erro ao calcular antípoda",
       "description": "{{message}}"
     }
+  },
+  "footer": {
+    "about": "Sobre Através",
+    "contact": "Contate-nos: Reportar bugs / Solicitar recursos",
+    "aboutContent": "Através permite que você explore o mundo através dos opostos. Pesquise qualquer local e encontre instantaneamente sua antípoda - o ponto exatamente oposto na Terra. Compare lugares, descubra curiosidades e deixe ou descubra mensagens deixadas por outros nesses locais espelhados. As mensagens são visíveis dentro de um raio de 100 km para proteger a privacidade, e sua localização exata nunca é armazenada ou compartilhada.",
+    "languagesTitle": "Idiomas suportados:",
+    "craftedWith": "Criado com React, Firebase e o espírito da maravilha global.",
+    "languages": [
+      "Inglês",
+      "Espanhol",
+      "Francês",
+      "Alemão",
+      "Italiano",
+      "Português",
+      "Holandês",
+      "Russo",
+      "Japonês",
+      "Coreano",
+      "Chinês",
+      "Sueco"
+    ]
   }
 } 

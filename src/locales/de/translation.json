@@ -119,5 +119,26 @@
         "description": "{{message}}"
       }
     }
+  },
+  "footer": {
+    "about": "Über Através",
+    "contact": "Kontakt: Fehler melden / Funktionswünsche",
+    "aboutContent": "Através ermöglicht es Ihnen, die Welt durch Gegensätze zu erkunden. Suchen Sie nach einem beliebigen Ort und finden Sie sofort seinen Antipoden - den genau gegenüberliegenden Punkt auf der Erde. Vergleichen Sie Orte, entdecken Sie interessante Fakten und hinterlassen oder entdecken Sie Nachrichten, die andere an diesen gespiegelten Orten hinterlassen haben. Nachrichten sind in einem Radius von 100 km sichtbar, um die Privatsphäre zu schützen, und Ihr genauer Standort wird niemals gespeichert oder geteilt.",
+    "languagesTitle": "Unterstützte Sprachen:",
+    "craftedWith": "Erstellt mit React, Firebase und dem Geist globaler Wunder.",
+    "languages": [
+      "Englisch",
+      "Spanisch",
+      "Französisch",
+      "Deutsch",
+      "Italienisch",
+      "Portugiesisch",
+      "Niederländisch",
+      "Russisch",
+      "Japanisch",
+      "Koreanisch",
+      "Chinesisch",
+      "Schwedisch"
+    ]
   }
 } 

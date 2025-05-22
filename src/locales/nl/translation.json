@@ -68,5 +68,26 @@
       "title": "Fout bij het berekenen van de antipode",
       "description": "{{message}}"
     }
+  },
+  "footer": {
+    "about": "Over Através",
+    "contact": "Neem contact op: Bugrapporten / Functieverzoeken",
+    "aboutContent": "Através stelt je in staat om de wereld te verkennen door tegenpolen. Zoek naar elke locatie en vind direct zijn antipode - het exact tegenoverliggende punt op aarde. Vergelijk plaatsen, ontdek weetjes en laat of ontdek berichten achtergelaten door anderen op deze spiegelende locaties. Berichten zijn zichtbaar binnen een straal van 100 km om de privacy te beschermen, en je exacte locatie wordt nooit opgeslagen of gedeeld.",
+    "languagesTitle": "Ondersteunde talen:",
+    "craftedWith": "Gemaakt met React, Firebase en de geest van wereldwonderen.",
+    "languages": [
+      "Engels",
+      "Spaans",
+      "Frans",
+      "Duits",
+      "Italiaans",
+      "Portugees",
+      "Nederlands",
+      "Russisch",
+      "Japans",
+      "Koreaans",
+      "Chinees",
+      "Zweeds"
+    ]
   }
 } 
