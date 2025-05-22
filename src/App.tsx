@@ -3,6 +3,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import Header from "./components/Header";
 import ContentWrapper from "./components/ContentWrapper";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <ChakraProvider>
           <Header />
           <ContentWrapper />
+          <Footer />
         </ChakraProvider>
       </I18nextProvider>
     </div>
