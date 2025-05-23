@@ -152,6 +152,7 @@
     "privacy": "プライバシー",
     "analyticsOptOutToast": "匿名解析をオプトアウトしました。",
     "analyticsOptInToast": "匿名解析を有効にしました。",
-    "analyticsOptOutLabel": "匿名解析をオプトアウトする"
+    "analyticsOptOutLabel": "匿名解析をオプトアウトする",
+    "lastUpdated": "最終更新：2025年5月"
   }
 } 

@@ -101,6 +101,7 @@
     "privacy": "隐私",
     "analyticsOptOutToast": "您已选择退出匿名分析。",
     "analyticsOptInToast": "您已启用匿名分析。",
-    "analyticsOptOutLabel": "退出匿名分析"
+    "analyticsOptOutLabel": "退出匿名分析",
+    "lastUpdated": "最后更新：2025年5月"
   }
 } 

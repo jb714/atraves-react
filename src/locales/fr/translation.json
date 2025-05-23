@@ -152,6 +152,7 @@
     "privacy": "Confidentialité",
     "analyticsOptOutToast": "Vous avez refusé l'analyse anonyme.",
     "analyticsOptInToast": "Vous avez activé l'analyse anonyme.",
-    "analyticsOptOutLabel": "Refuser l'analyse anonyme"
+    "analyticsOptOutLabel": "Refuser l'analyse anonyme",
+    "lastUpdated": "Dernière mise à jour : mai 2025"
   }
 } 
