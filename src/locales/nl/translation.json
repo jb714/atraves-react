@@ -88,6 +88,19 @@
       "Koreaans",
       "Chinees",
       "Zweeds"
-    ]
+    ],
+    "privacyContent": [
+      "Bij Através nemen we je privacy serieus. Dit moet je weten:",
+      "• We slaan alleen je taalvoorkeur op in de lokale opslag van je browser om een consistente ervaring te bieden.",
+      "• We gebruiken anonieme analyses om te begrijpen hoe mensen Através gebruiken, maar we volgen nooit individuele gebruikers.",
+      "• Berichten zijn alleen zichtbaar binnen een straal van 100 km om de privacy te beschermen.",
+      "• Je exacte locatie wordt nooit opgeslagen of gedeeld.",
+      "• We gebruiken geen trackingcookies en verzamelen geen persoonlijke informatie.",
+      "Als je vragen hebt over privacy, neem dan contact met ons op."
+    ],
+    "privacy": "Privacy",
+    "analyticsOptOutToast": "Je hebt je afgemeld voor anonieme analyse.",
+    "analyticsOptInToast": "Je hebt anonieme analyse ingeschakeld.",
+    "analyticsOptOutLabel": "Afmelden voor anonieme analyse"
   }
 } 

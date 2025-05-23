@@ -130,7 +130,18 @@
     "subtitle": "The other side of the world, here",
     "contact": "Contact Us: Bug Reports / Feature Requests",
     "about": "About Através",
+    "privacy": "Privacy",
     "aboutContent": "Através lets you explore the world through opposites. Search any location and instantly find its antipode - the exact opposite point on Earth. Compare places, discover fun facts and leave or uncover messages left by others at these mirrored locations. Messages are visible within a 100 km radius to protect privacy, and your exact location is never stored or shared.",
+    "privacyContent": [
+      "At Através, we take your privacy seriously. Here's what you should know:",
+      "• We only store your language preference in your browser's local storage to provide a consistent experience.",
+      "• We use anonymous analytics to understand how people use Através, but we never track individual users.",
+      "• Messages are only visible within a 100 km radius to protect privacy.",
+      "• Your exact location is never stored or shared.",
+      "• We don't use any tracking cookies or collect personal information.",
+      "If you have any questions about privacy, please contact us."
+    ],
+    "lastUpdated": "Last updated: May 2025",
     "languagesTitle": "Languages we support:",
     "craftedWith": "Crafted with React, Firebase, and the spirit of global wonder.",
     "languages": [
@@ -146,6 +157,9 @@
       "Korean",
       "Chinese",
       "Swedish"
-    ]
+    ],
+    "analyticsOptOutToast": "You have opted out of anonymous analytics.",
+    "analyticsOptInToast": "You have enabled anonymous analytics.",
+    "analyticsOptOutLabel": "Opt out of anonymous analytics"
   }
 } 

@@ -139,6 +139,19 @@
       "Koreanska",
       "Kinesiska",
       "Svenska"
-    ]
+    ],
+    "privacyContent": [
+      "Katika Através, tunathamini faragha yako. Haya ndiyo unapaswa kujua:",
+      "• Tunahifadhi tu chaguo lako la lugha kwenye hifadhi ya kivinjari chako ili kutoa matumizi thabiti.",
+      "• Tunatumia uchambuzi usiotambulika kuelewa jinsi watu wanavyotumia Através, lakini hatufuatilii watumiaji mmoja mmoja.",
+      "• Ujumbe unaonekana tu ndani ya umbali wa kilomita 100 ili kulinda faragha.",
+      "• Mahali pako halisi haihifadhiwi wala kushirikiwa kamwe.",
+      "• Hatutumii vidakuzi vya ufuatiliaji wala kukusanya taarifa binafsi.",
+      "Ikiwa una maswali yoyote kuhusu faragha, tafadhali wasiliana nasi."
+    ],
+    "privacy": "Faragha",
+    "analyticsOptOutToast": "Umejiondoa kwenye uchambuzi usiotambulika.",
+    "analyticsOptInToast": "Umewezeshwa uchambuzi usiotambulika.",
+    "analyticsOptOutLabel": "Jiondoe kwenye uchambuzi usiotambulika"
   }
 } 

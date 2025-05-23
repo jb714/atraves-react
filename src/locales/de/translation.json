@@ -139,6 +139,19 @@
       "Koreanisch",
       "Chinesisch",
       "Schwedisch"
-    ]
+    ],
+    "privacyContent": [
+      "Bei Através nehmen wir Ihre Privatsphäre ernst. Das sollten Sie wissen:",
+      "• Wir speichern nur Ihre Sprachpräferenz im lokalen Speicher Ihres Browsers, um ein konsistentes Erlebnis zu bieten.",
+      "• Wir verwenden anonyme Analysen, um zu verstehen, wie Menschen Através nutzen, verfolgen aber niemals einzelne Nutzer.",
+      "• Nachrichten sind nur innerhalb eines Radius von 100 km sichtbar, um die Privatsphäre zu schützen.",
+      "• Ihr genauer Standort wird niemals gespeichert oder geteilt.",
+      "• Wir verwenden keine Tracking-Cookies und sammeln keine persönlichen Informationen.",
+      "Wenn Sie Fragen zum Datenschutz haben, kontaktieren Sie uns bitte."
+    ],
+    "privacy": "Datenschutz",
+    "analyticsOptOutToast": "Sie haben der anonymen Analyse widersprochen.",
+    "analyticsOptInToast": "Sie haben die anonyme Analyse aktiviert.",
+    "analyticsOptOutLabel": "Von anonymer Analyse abmelden"
   }
 } 

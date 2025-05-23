@@ -139,6 +139,19 @@
       "Coréen",
       "Chinois",
       "Suédois"
-    ]
+    ],
+    "privacyContent": [
+      "Chez Através, nous prenons votre vie privée au sérieux. Voici ce que vous devez savoir :",
+      "• Nous stockons uniquement votre préférence de langue dans le stockage local de votre navigateur pour garantir une expérience cohérente.",
+      "• Nous utilisons des analyses anonymes pour comprendre comment les gens utilisent Através, mais nous ne suivons jamais les utilisateurs individuellement.",
+      "• Les messages ne sont visibles que dans un rayon de 100 km pour protéger la vie privée.",
+      "• Votre position exacte n'est jamais stockée ni partagée.",
+      "• Nous n'utilisons aucun cookie de suivi et ne collectons aucune information personnelle.",
+      "Si vous avez des questions concernant la confidentialité, veuillez nous contacter."
+    ],
+    "privacy": "Confidentialité",
+    "analyticsOptOutToast": "Vous avez refusé l'analyse anonyme.",
+    "analyticsOptInToast": "Vous avez activé l'analyse anonyme.",
+    "analyticsOptOutLabel": "Refuser l'analyse anonyme"
   }
 } 

@@ -88,6 +88,19 @@
       "Coreano",
       "Chinês",
       "Sueco"
-    ]
+    ],
+    "privacyContent": [
+      "Na Através, levamos sua privacidade a sério. Veja o que você precisa saber:",
+      "• Apenas armazenamos sua preferência de idioma no armazenamento local do seu navegador para proporcionar uma experiência consistente.",
+      "• Usamos análises anônimas para entender como as pessoas usam o Através, mas nunca rastreamos usuários individualmente.",
+      "• As mensagens só são visíveis dentro de um raio de 100 km para proteger a privacidade.",
+      "• Sua localização exata nunca é armazenada ou compartilhada.",
+      "• Não usamos cookies de rastreamento nem coletamos informações pessoais.",
+      "Se você tiver alguma dúvida sobre privacidade, entre em contato conosco."
+    ],
+    "privacy": "Privacidade",
+    "analyticsOptOutToast": "Você optou por não participar da análise anônima.",
+    "analyticsOptInToast": "Você ativou a análise anônima.",
+    "analyticsOptOutLabel": "Não participar da análise anônima"
   }
 } 
