@@ -47,7 +47,7 @@ const Footer = () => {
         </Box>
         {/* Right: Contact */}
         <Box justifySelf="end">
-          <Link href="mailto:your@email.com?subject=Através Feedback" color="blue.600" minW="120px" textAlign="right">
+          <Link href="mailto:contact@atraves.net?subject=Através Feedback" color="blue.600" minW="120px" textAlign="right">
             {t('footer.contact')}
           </Link>
         </Box>

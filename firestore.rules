@@ -1,6 +1,21 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Helper functions
+    function isValidLocation(location) {
+      return location is map &&
+             location.lat is number &&
+             location.lng is number &&
+             location.lat >= -90 && location.lat <= 90 &&
+             location.lng >= -180 && location.lng <= 180;
+    }
+    
+    function isValidMessageTime(messageTime) {
+      return messageTime is timestamp &&
+             messageTime <= request.time &&
+             messageTime > request.time - duration.value(30, 'd');
+    }
+
     // Messages collection
     match /messages/{messageId} {
       // Allow reading messages
@@ -8,17 +23,23 @@ service cloud.firestore {
       
       // Allow creating messages with validation
       allow create: if 
+        // Rate limiting: max 10 messages per minute per user
+        request.time > resource.data.timestamp + duration.value(1, 'm') &&
+        
         // Message content must exist and be a string
         request.resource.data.content is string &&
         // Content length between 1 and 1000 characters
         request.resource.data.content.size() >= 1 &&
         request.resource.data.content.size() <= 1000 &&
+        
         // Location must exist and be valid
-        request.resource.data.location is map &&
-        request.resource.data.location.lat is number &&
-        request.resource.data.location.lng is number &&
-        // Timestamp must exist
-        request.resource.data.timestamp is timestamp;
+        isValidLocation(request.resource.data.location) &&
+        
+        // Timestamp must exist and be valid
+        isValidMessageTime(request.resource.data.timestamp) &&
+        
+        // Ensure no additional fields are added
+        request.resource.data.keys().hasAll(['content', 'location', 'timestamp']);
       
       // No updates or deletes allowed
       allow update, delete: if false;
