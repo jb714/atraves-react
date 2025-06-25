@@ -31,23 +31,52 @@ const Footer = () => {
   };
 
   return (
-    <Box as="footer" p={4} bg="white" borderTop="1px solid" borderColor="gray.200" left={0} right={0} bottom={0} zIndex={10}>
+    <Box 
+      as="footer" 
+      p={6} 
+      bg="atraves.neutral.800" 
+      color="white" 
+      mt={16}
+    >
       <Grid maxW="1200px" mx="auto" templateColumns="1fr auto 1fr" alignItems="center">
         {/* Left: About */}
         <Box justifySelf="start">
-          <Button variant="link" color="blue.600" onClick={onAboutOpen} fontWeight="normal" minW="120px" textAlign="left">
+          <Button 
+            variant="link" 
+            color="atraves.accent.400" 
+            onClick={onAboutOpen} 
+            fontWeight="medium" 
+            minW="120px" 
+            textAlign="left"
+            _hover={{ color: "atraves.accent.300" }}
+          >
             {t('footer.about')}
           </Button>
         </Box>
         {/* Center: Privacy */}
         <Box justifySelf="center">
-          <Button variant="link" color="blue.600" onClick={onPrivacyOpen} fontWeight="normal" minW="120px" textAlign="center">
+          <Button 
+            variant="link" 
+            color="atraves.accent.400" 
+            onClick={onPrivacyOpen} 
+            fontWeight="medium" 
+            minW="120px" 
+            textAlign="center"
+            _hover={{ color: "atraves.accent.300" }}
+          >
             {t('footer.privacy')}
           </Button>
         </Box>
         {/* Right: Contact */}
         <Box justifySelf="end">
-          <Link href="mailto:contact@atraves.net?subject=Através Feedback" color="blue.600" minW="120px" textAlign="right">
+          <Link 
+            href="mailto:contact@atraves.net?subject=Através Feedback" 
+            color="atraves.accent.400" 
+            minW="120px" 
+            textAlign="right"
+            fontWeight="medium"
+            _hover={{ color: "atraves.accent.300" }}
+          >
             {t('footer.contact')}
           </Link>
         </Box>

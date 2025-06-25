@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import LocationInput from "./LocationInput";
-import { Text, useToast, Button, HStack, Grid, GridItem, RadioGroup, Radio, Stack, Divider } from "@chakra-ui/react";
+import { useToast, Button, Grid, GridItem, RadioGroup, Radio, Stack, Divider } from "@chakra-ui/react";
 import { isValidLatitude, isValidLongitude, geocodeAddress } from "../utils/locationUtils";
 import useDebounce from "../hooks/useDebounce";
 import { useTranslation } from "react-i18next";
