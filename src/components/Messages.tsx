@@ -114,14 +114,16 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
     };
 
     return (
-        <Box mt={8} p={4} borderTop="1px" borderColor="gray.200">
-            <VStack spacing={4} align="stretch">
-                <Text fontSize="lg" fontWeight="medium">
-                    {t('messages.title')}
-                </Text>
-                <Text fontSize="sm" color="gray.600">
-                    {t('messages.description')}
-                </Text>
+        <Box p={8}>
+            <VStack spacing={6} align="stretch">
+                <Box textAlign="center">
+                    <Text fontSize="2xl" fontWeight="bold" color="atraves.primary.800" mb={2}>
+                        {t('messages.title')}
+                    </Text>
+                    <Text fontSize="md" color="atraves.neutral.600">
+                        {t('messages.description')}
+                    </Text>
+                </Box>
                 <RadioGroup
                     onChange={setShowAntipode}
                     value={showAntipode}
