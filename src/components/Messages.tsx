@@ -117,11 +117,19 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
         <Box mt={8} p={4} borderTop="1px" borderColor="gray.200">
             <VStack spacing={4} align="stretch">
                 <Text fontSize="lg" fontWeight="medium">
-                    {t('messages.title')}
+                    📦 {t('messages.title')}
                 </Text>
-                <Text fontSize="sm" color="gray.600">
-                    {t('messages.description')}
-                </Text>
+                <Alert
+                    status="info"
+                    variant="subtle"
+                    borderRadius="md"
+                    fontSize="sm"
+                >
+                    <AlertIcon />
+                    <AlertDescription>
+                        {t('messages.description')}
+                    </AlertDescription>
+                </Alert>
                 <RadioGroup
                     onChange={setShowAntipode}
                     value={showAntipode}
@@ -162,13 +170,21 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                                 <Text color="gray.500" mb={4}>
                                     {t('messages.noMessages')}
                                 </Text>
-                                <Button
-                                    colorScheme="blue"
-                                    onClick={onOpen}
-                                    isLoading={isLoading}
-                                >
-                                    {t('messages.leaveMessage')}
-                                </Button>
+                                <VStack spacing={2}>
+                                    <Button
+                                        colorScheme="blue"
+                                        onClick={onOpen}
+                                        isLoading={isLoading}
+                                        size="lg"
+                                        _hover={{ transform: "translateY(-2px)", boxShadow: "lg" }}
+                                        transition="all 0.2s"
+                                    >
+                                        ✍️ {t('messages.leaveMessage')}
+                                    </Button>
+                                    <Text fontSize="xs" color="gray.500" fontStyle="italic">
+                                        {t('messages.tagline')}
+                                    </Text>
+                                </VStack>
                             </Box>
                         ) : (
                             <>
@@ -194,14 +210,18 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                                         mr={4}
                                         onClick={onOpen}
                                         isLoading={isLoading}
+                                        _hover={{ transform: "translateY(-2px)", boxShadow: "md" }}
+                                        transition="all 0.2s"
                                     >
-                                        {t('messages.leaveMessage')}
+                                        ✍️ {t('messages.leaveMessage')}
                                     </Button>
                                     <Button
                                         colorScheme="blue"
                                         variant="ghost"
                                         onClick={handleCheckForMessages}
                                         isLoading={isLoading}
+                                        _hover={{ bg: "blue.50" }}
+                                        transition="all 0.2s"
                                     >
                                         {t('messages.checkMessages')}
                                     </Button>

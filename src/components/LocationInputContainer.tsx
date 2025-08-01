@@ -266,8 +266,10 @@ const LocationInputContainer = ({
                         colorScheme="blue"
                         size="sm"
                         variant="outline"
+                        _hover={{ transform: "translateY(-1px)", boxShadow: "sm" }}
+                        transition="all 0.2s"
                     >
-                        {t('input.useMyLocation')}
+                        📍 {t('input.useMyLocation')}
                     </Button>
                 </Stack>
             </RadioGroup>
