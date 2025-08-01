@@ -31,23 +31,23 @@ const Footer = () => {
   };
 
   return (
-    <Box as="footer" p={4} bg="white" borderTop="1px solid" borderColor="gray.200" left={0} right={0} bottom={0} zIndex={10}>
+    <Box as="footer" p={6} bg="#eaf6fc" borderTop="1px solid" borderColor="#d8f0fa" left={0} right={0} bottom={0} zIndex={10}>
       <Grid maxW="1200px" mx="auto" templateColumns="1fr auto 1fr" alignItems="center">
         {/* Left: About */}
         <Box justifySelf="start">
-          <Button variant="link" color="blue.600" onClick={onAboutOpen} fontWeight="normal" minW="120px" textAlign="left">
+          <Button variant="link" color="#ffb88c" onClick={onAboutOpen} fontWeight="semibold" minW="120px" textAlign="left" letterSpacing="0.3px" _hover={{ color: "#ff994c" }}>
             {t('footer.about')}
           </Button>
         </Box>
         {/* Center: Privacy */}
         <Box justifySelf="center">
-          <Button variant="link" color="blue.600" onClick={onPrivacyOpen} fontWeight="normal" minW="120px" textAlign="center">
+          <Button variant="link" color="#ffb88c" onClick={onPrivacyOpen} fontWeight="semibold" minW="120px" textAlign="center" letterSpacing="0.3px" _hover={{ color: "#ff994c" }}>
             {t('footer.privacy')}
           </Button>
         </Box>
         {/* Right: Contact */}
         <Box justifySelf="end">
-          <Link href="mailto:contact@atraves.net?subject=Através Feedback" color="blue.600" minW="120px" textAlign="right">
+          <Link href="mailto:contact@atraves.net?subject=Através Feedback" color="#ffb88c" minW="120px" textAlign="right" fontWeight="semibold" letterSpacing="0.3px" _hover={{ color: "#ff994c" }}>
             {t('footer.contact')}
           </Link>
         </Box>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import LocationInput from "./LocationInput";
-import { Text, useToast, Button, HStack, Grid, GridItem, RadioGroup, Radio, Stack, Divider } from "@chakra-ui/react";
+import { Text, useToast, Button, HStack, Grid, GridItem, RadioGroup, Radio, Stack, Divider, Box } from "@chakra-ui/react";
 import { isValidLatitude, isValidLongitude, geocodeAddress } from "../utils/locationUtils";
 import useDebounce from "../hooks/useDebounce";
 import { useTranslation } from "react-i18next";
@@ -251,55 +251,89 @@ const LocationInputContainer = ({
 
     return (
         <Stack spacing={4}>
-            <RadioGroup value={inputMode} onChange={(value) => setInputMode(value as InputMode)}>
-                <Stack direction="row" spacing={4} wrap="wrap" justify="center" align="center">
-                    <Radio value="coordinates">{t('input.coordinates.label')}</Radio>
-                    <Radio value="address">{t('input.address.label')}</Radio>
-                    <Radio value="place">{t('input.place.label')}</Radio>
-                    <Radio value="postal">{t('input.postal.label')}</Radio>
-                    <Radio value="landmark">{t('input.landmark.label')}</Radio>
-                    <Divider orientation="vertical" height="24px" />
-                    <Button
-                        onClick={handleGetCurrentLocation}
-                        isLoading={isGettingLocation}
-                        loadingText={t('input.useMyLocation')}
-                        colorScheme="blue"
-                        size="sm"
-                        variant="outline"
-                    >
-                        {t('input.useMyLocation')}
-                    </Button>
-                </Stack>
-            </RadioGroup>
+            <Box 
+                bg="white" 
+                p={4} 
+                borderRadius="12px" 
+                boxShadow="sm"
+                border="1px solid"
+                borderColor="gray.100"
+            >
+                <RadioGroup value={inputMode} onChange={(value) => setInputMode(value as InputMode)}>
+                    <Stack direction="row" spacing={4} wrap="wrap" justify="center" align="center">
+                        <Radio value="coordinates">{t('input.coordinates.label')}</Radio>
+                        <Radio value="address">{t('input.address.label')}</Radio>
+                        <Radio value="place">{t('input.place.label')}</Radio>
+                        <Radio value="postal">{t('input.postal.label')}</Radio>
+                        <Radio value="landmark">{t('input.landmark.label')}</Radio>
+                        <Divider orientation="vertical" height="24px" />
+                        <Button
+                            onClick={handleGetCurrentLocation}
+                            isLoading={isGettingLocation}
+                            loadingText={t('input.useMyLocation')}
+                            bg="#ffb88c"
+                            color="white"
+                            size="sm"
+                            _hover={{ 
+                                bg: "#ff994c", 
+                                transform: "translateY(-1px)", 
+                                boxShadow: "sm" 
+                            }}
+                            transition="all 0.2s"
+                            borderRadius="12px"
+                        >
+                            📍 {t('input.useMyLocation')}
+                        </Button>
+                    </Stack>
+                </RadioGroup>
+            </Box>
 
             {inputMode !== "coordinates" && (
-                <LocationInput
-                    label={getInputLabel()}
-                    placeholder={getPlaceholderText()}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                />
+                <Box 
+                    bg="white" 
+                    p={4} 
+                    borderRadius="lg" 
+                    boxShadow="sm"
+                    border="1px solid"
+                    borderColor="gray.100"
+                >
+                    <LocationInput
+                        label={getInputLabel()}
+                        placeholder={getPlaceholderText()}
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </Box>
             )}
 
             {inputMode === "coordinates" && (
-                <Grid templateColumns="repeat(2, 1fr)" gap={4}>
-                    <GridItem>
-                        <LocationInput
-                            label={t('input.latitude.label')}
-                            placeholder={t('input.latitude.placeholder')}
-                            value={latitude}
-                            onChange={(e) => setLatitude(e.target.value)}
-                        />
-                    </GridItem>
-                    <GridItem>
-                        <LocationInput
-                            label={t('input.longitude.label')}
-                            placeholder={t('input.longitude.placeholder')}
-                            value={longitude}
-                            onChange={(e) => setLongitude(e.target.value)}
-                        />
-                    </GridItem>
-                </Grid>
+                <Box 
+                    bg="white" 
+                    p={4} 
+                    borderRadius="lg" 
+                    boxShadow="sm"
+                    border="1px solid"
+                    borderColor="gray.100"
+                >
+                    <Grid templateColumns="repeat(2, 1fr)" gap={4}>
+                        <GridItem>
+                            <LocationInput
+                                label={t('input.latitude.label')}
+                                placeholder={t('input.latitude.placeholder')}
+                                value={latitude}
+                                onChange={(e) => setLatitude(e.target.value)}
+                            />
+                        </GridItem>
+                        <GridItem>
+                            <LocationInput
+                                label={t('input.longitude.label')}
+                                placeholder={t('input.longitude.placeholder')}
+                                value={longitude}
+                                onChange={(e) => setLongitude(e.target.value)}
+                            />
+                        </GridItem>
+                    </Grid>
+                </Box>
             )}
         </Stack>
     );

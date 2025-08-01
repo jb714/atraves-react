@@ -10,7 +10,7 @@
     "defaultAntipode": "Indian Ocean (-34.0522°, 61.7563°)"
   },
   "input": {
-    "useMyLocation": "Use My Location",
+    "useMyLocation": "Center on Me",
     "gettingLocation": "Getting your location...",
     "coordinates": {
       "label": "Enter Coordinates",
@@ -45,7 +45,8 @@
     "title": "Message in a Bottle",
     "description": "Leave a message that will be discoverable on the other side of the world, or check if there's a message waiting for you at this location. (For your privacy, messages are only discoverable within a 100 km area. Your exact location is never stored or shared.)",
     "leaveMessage": "Leave a Message",
-    "checkMessages": "Check for Messages",
+    "checkMessages": "See What's Waiting",
+    "tagline": "Broadcast a thought into the void →",
     "fromAntipode": "Sent from the other side of the world",
     "noMessages": "No messages found at this location. Leave a message to be discovered on the other side of the world!",
     "error": {
@@ -61,7 +62,7 @@
     },
     "modal": {
       "title": "Leave a Message",
-      "discoverableAt": "Your message will be discoverable at:",
+      "discoverableAt": "Your message will float across to:",
       "placeholder": "Write your message here...",
       "send": "Send Message"
     },
