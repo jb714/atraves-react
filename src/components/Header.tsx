@@ -9,7 +9,30 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <Box as="header" p={4} bg="#e8f6fc">
+    <Box 
+        as="header" 
+        p={4} 
+        bgGradient="linear(to-b, #eaf6fc, #d8f0fa)" 
+        boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.05)"
+        position="relative"
+        _after={{
+          content: '""',
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "4px",
+          background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.3) 60%, transparent 80%, rgba(255,255,255,0.3) 100%)",
+          backgroundSize: "200px 4px",
+          animation: "wave 3s ease-in-out infinite"
+        }}
+        sx={{
+          "@keyframes wave": {
+            "0%, 100%": { backgroundPosition: "0% 0%" },
+            "50%": { backgroundPosition: "100% 0%" }
+          }
+        }}
+    >
       <Box maxW="1200px" mx="auto" textAlign="center">
         {/* <Heading size="lg">{t('header.title')}</Heading> */}
         <MotionBox

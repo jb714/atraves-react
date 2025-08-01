@@ -50,7 +50,7 @@ const ContentWrapper = () => {
     const antipodeCoordinates = getAntipodeCoordinates()
 
     return (
-        <Box px={[2, 4, 6]}>
+        <Box px={[2, 4, 6]} pt={8} pb={8}>
             <LocationInputContainer 
                 latitude={latitude}
                 setLatitude={setLatitude}
@@ -65,53 +65,69 @@ const ContentWrapper = () => {
                 gap={[2, 4, 6]}
             >
                 <GridItem>
-                    <Box mb={2}>
-                        <Text fontSize={["md", "lg"]} fontWeight="medium">
-                            🌍 {t('location.original')}
-                        </Text>
-                        <Text fontSize={["xs", "sm"]} color="gray.600">
-                            {latitude && longitude ? 
-                                `(${parseFloat(latitude).toFixed(4)}°, ${parseFloat(longitude).toFixed(4)}°)` : 
-                                t('location.defaultLocation')}
-                        </Text>
-                    </Box>
                     <Box
-                        borderRadius="lg"
-                        overflow="hidden"
-                        boxShadow="md"
+                        bg="white"
+                        borderRadius="12px"
+                        p={4}
+                        boxShadow="sm"
                         border="1px solid"
-                        borderColor="gray.200"
-                        _hover={{ boxShadow: "lg" }}
-                        transition="box-shadow 0.2s"
+                        borderColor="gray.100"
                     >
-                        <div id="UserMap" className="map-container">
-                            <Map lat={coordinates.lat} lng={coordinates.lng}/>
-                        </div>
+                        <Box mb={3}>
+                            <Text fontSize={["md", "lg"]} fontWeight="medium">
+                                🌍 {t('location.original')}
+                            </Text>
+                            <Text fontSize="xs" color="gray.600" lineHeight="1.3">
+                                {latitude && longitude ? 
+                                    `(${parseFloat(latitude).toFixed(4)}°, ${parseFloat(longitude).toFixed(4)}°)` : 
+                                    t('location.defaultLocation')}
+                            </Text>
+                        </Box>
+                        <Box
+                            borderRadius="14px"
+                            overflow="hidden"
+                            border="1px solid"
+                            borderColor="gray.200"
+                            _hover={{ boxShadow: "md" }}
+                            transition="box-shadow 0.2s"
+                        >
+                            <div id="UserMap" className="map-container" style={{ borderRadius: '14px', overflow: 'hidden' }}>
+                                <Map lat={coordinates.lat} lng={coordinates.lng}/>
+                            </div>
+                        </Box>
                     </Box>
                 </GridItem>
                 <GridItem>
-                    <Box mb={2}>
-                        <Text fontSize={["md", "lg"]} fontWeight="medium">
-                            🎯 {t('location.antipode')}
-                        </Text>
-                        <Text fontSize={["xs", "sm"]} color="gray.600">
-                            {latitude && longitude ? 
-                                `(${antipodeCoordinates.lat.toFixed(4)}°, ${antipodeCoordinates.lng.toFixed(4)}°)` : 
-                                t('location.defaultAntipode')}
-                        </Text>
-                    </Box>
                     <Box
-                        borderRadius="lg"
-                        overflow="hidden"
-                        boxShadow="md"
+                        bg="white"
+                        borderRadius="12px"
+                        p={4}
+                        boxShadow="sm"
                         border="1px solid"
-                        borderColor="gray.200"
-                        _hover={{ boxShadow: "lg" }}
-                        transition="box-shadow 0.2s"
+                        borderColor="gray.100"
                     >
-                        <div id="AntipodeMap" className="map-container">
-                            <Map lat={antipodeCoordinates.lat} lng={antipodeCoordinates.lng}/>
-                        </div>
+                        <Box mb={3}>
+                            <Text fontSize={["md", "lg"]} fontWeight="medium">
+                                🎯 {t('location.antipode')}
+                            </Text>
+                            <Text fontSize="xs" color="gray.600" lineHeight="1.3">
+                                {latitude && longitude ? 
+                                    `(${antipodeCoordinates.lat.toFixed(4)}°, ${antipodeCoordinates.lng.toFixed(4)}°)` : 
+                                    t('location.defaultAntipode')}
+                            </Text>
+                        </Box>
+                        <Box
+                            borderRadius="14px"
+                            overflow="hidden"
+                            border="1px solid"
+                            borderColor="gray.200"
+                            _hover={{ boxShadow: "md" }}
+                            transition="box-shadow 0.2s"
+                        >
+                            <div id="AntipodeMap" className="map-container" style={{ borderRadius: '14px', overflow: 'hidden' }}>
+                                <Map lat={antipodeCoordinates.lat} lng={antipodeCoordinates.lng}/>
+                            </div>
+                        </Box>
                     </Box>
                 </GridItem>
             </Grid>
