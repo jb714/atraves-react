@@ -21,10 +21,10 @@ const Header = () => {
           bottom: 0,
           left: 0,
           right: 0,
-          height: "4px",
-          background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.3) 60%, transparent 80%, rgba(255,255,255,0.3) 100%)",
-          backgroundSize: "200px 4px",
-          animation: "wave 3s ease-in-out infinite"
+          height: "6px",
+          background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 15%, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.8) 70%, rgba(255,255,255,0.4) 85%, transparent 100%)",
+          backgroundSize: "300px 6px",
+          animation: "wave 6s ease-in-out infinite"
         }}
         sx={{
           "@keyframes wave": {
