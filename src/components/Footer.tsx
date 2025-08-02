@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <Box as="footer" p={[4, 6]} bg="#eaf6fc" borderTop="1px solid" borderColor="#d8f0fa" left={0} right={0} bottom={0} zIndex={10}>
-      <Grid maxW="1200px" mx="auto" templateColumns={["1fr", "1fr auto 1fr"]} gap={[2, 0]} alignItems="center">
+      <Grid maxW="1200px" mx="auto" templateColumns={["1fr", "1fr auto 1fr"]} gap={[1, 0]} alignItems="center">
         {/* Left: About */}
         <Box justifySelf={["center", "start"]}>
           <Button variant="link" color="#ffb88c" onClick={onAboutOpen} fontWeight="semibold" minW={["auto", "120px"]} textAlign={["center", "left"]} letterSpacing="0.3px" _hover={{ color: "#ff994c" }} fontSize={["sm", "md"]}>
@@ -40,7 +40,7 @@ const Footer = () => {
           </Button>
         </Box>
         {/* Center: Privacy */}
-        <Box justifySelf="center" display={["none", "block"]}>
+        <Box justifySelf="center">
           <Button variant="link" color="#ffb88c" onClick={onPrivacyOpen} fontWeight="semibold" minW={["auto", "120px"]} textAlign="center" letterSpacing="0.3px" _hover={{ color: "#ff994c" }} fontSize={["sm", "md"]}>
             {t('footer.privacy')}
           </Button>
