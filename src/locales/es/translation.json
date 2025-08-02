@@ -22,7 +22,7 @@
     },
     "place": {
       "label": "Buscar por Lugar",
-      "placeholder": "ej., Torre Eiffel, Estatua de la Libertad"
+      "placeholder": "ej., Sagrada Familia, Chichen Itza"
     },
     "postal": {
       "label": "Buscar por Código Postal",
@@ -30,7 +30,7 @@
     },
     "landmark": {
       "label": "Buscar por Punto de Referencia",
-      "placeholder": "ej., Gran Cañón, Monte Everest"
+      "placeholder": "ej., Alhambra, Cristo Redentor"
     },
     "latitude": {
       "label": "Ingresar Latitud",
@@ -45,7 +45,17 @@
     "title": "Mensaje en una Botella",
     "description": "Deja un mensaje que será descubierto en el otro lado del mundo, o revisa si hay un mensaje esperándote en esta ubicación.",
     "leaveMessage": "Dejar un Mensaje",
-    "checkMessages": "Buscar Mensajes",
+    "checkMessages": "Ver Qué Espera",
+    "tagline": "Difunde un pensamiento al vacío →",
+    "noBottles": "No hay botellas flotando aquí — aún.",
+    "noBottlesDescription": "Sé el primero en lanzar un mensaje desde aquí al océano digital.",
+    "fromAntipode": "Enviado desde el otro lado del mundo",
+    "noMessages": "No se encontraron mensajes en esta ubicación. ¡Deja un mensaje para que sea descubierto en el otro lado del mundo!",
+    "error": {
+      "title": "Error",
+      "loading": "No se pudieron cargar los mensajes. Por favor, inténtalo de nuevo.",
+      "sending": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo."
+    },
     "location": {
       "updated": {
         "title": "Ubicación actualizada",
@@ -68,8 +78,6 @@
         "description": "No hay mensajes en esta ubicación. ¿Por qué no dejar uno?"
       }
     },
-    "noMessages": "No se encontraron mensajes en esta ubicación. ¡Deja un mensaje para que sea descubierto en el otro lado del mundo!",
-    "fromAntipode": "Enviado desde el otro lado del mundo",
     "messagesSeenFromOriginal": "Mensajes vistos desde la ubicación original",
     "messagesSeenAtAntipode": "Mensajes vistos en la ubicación antipodal",
     "privacyNote": "Por tu privacidad, los mensajes solo son visibles dentro de un área de 100 km. Tu ubicación exacta nunca se almacena ni se comparte."
@@ -121,6 +129,8 @@
     }
   },
   "footer": {
+    "title": "Através",
+    "subtitle": "El otro lado del mundo, aquí",
     "about": "Acerca de Através",
     "contact": "Contáctanos: Informar errores / Sugerir mejoras",
     "aboutContent": "Através te permite explorar el mundo a través de los opuestos. Busca cualquier ubicación y encuentra instantáneamente su antípoda - el punto exactamente opuesto en la Tierra. Compara lugares, descubre datos curiosos y deja o descubre mensajes dejados por otros en estas ubicaciones espejo. Los mensajes son visibles dentro de un radio de 100 km para proteger la privacidad, y tu ubicación exacta nunca se almacena ni se comparte.",
@@ -138,7 +148,7 @@
       "Japonés",
       "Coreano",
       "Chino",
-      "Sueco"
+      "Suajili"
     ],
     "privacyContent": [
       "En Através, nos tomamos tu privacidad en serio. Esto es lo que debes saber:",

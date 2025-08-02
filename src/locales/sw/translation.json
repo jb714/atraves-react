@@ -22,7 +22,7 @@
     },
     "place": {
       "label": "Tafuta kwa Mahali",
-      "placeholder": "mfano, Mnara wa Eiffel, Sanamu ya Uhuru"
+      "placeholder": "mfano, Kilimanjaro, Serengeti"
     },
     "postal": {
       "label": "Tafuta kwa Msimbo wa Posta",
@@ -30,7 +30,7 @@
     },
     "landmark": {
       "label": "Tafuta kwa Alama ya Kijiografia",
-      "placeholder": "mfano, Bonde Kubwa, Mlima Everest"
+      "placeholder": "mfano, Ngorongoro, Bahari ya Victoria"
     },
     "latitude": {
       "label": "Weka Latitudo",
@@ -43,9 +43,19 @@
   },
   "messages": {
     "title": "Ujumbe kwenye Chupa",
-    "description": "Lämna ett meddelande som kan upptäckas på andra sidan jorden, eller se om det finns ett meddelande som väntar på dig här. (För din integritet är meddelanden endast synliga inom ett område på 100 km. Din exakta plats lagras eller delas aldrig.)",
+    "description": "Acha ujumbe ambao utapatikana upande wa pili wa dunia, au angalia kama kuna ujumbe unaokungojea katika mahali hapa. (Kwa faragha yako, ujumbe unaonekana tu ndani ya eneo la kilomita 100. Mahali pako halisi haihifadhiwi wala kushirikiwa.)",
     "leaveMessage": "Acha Ujumbe",
-    "checkMessages": "Angalia Ujumbe",
+    "checkMessages": "Ona Kilichosubiri",
+    "tagline": "Tandaza wazo katika utupu →",
+    "noBottles": "Hakuna chupa zinazopeperuka hapa — bado.",
+    "noBottlesDescription": "Kuwa wa kwanza kutuma ujumbe kutoka hapa kwenda baharini ya kidijitali.",
+    "fromAntipode": "Iliyotumwa kutoka upande wa pili wa dunia",
+    "noMessages": "Hakuna ujumbe uliopatikana katika mahali hapa. Acha ujumbe ili ugunduliwe upande wa pili wa dunia!",
+    "error": {
+      "title": "Hitilafu",
+      "loading": "Kushindwa kupakia ujumbe. Tafadhali jaribu tena.",
+      "sending": "Kushindwa kutuma ujumbe. Tafadhali jaribu tena."
+    },
     "location": {
       "updated": {
         "title": "Mahali pamebadilishwa",
@@ -68,11 +78,9 @@
         "description": "Hakuna ujumbe kwenye mahali hii. Kwa nini usiacha mmoja?"
       }
     },
-    "noMessages": "Inga meddelanden hittades på denna plats. Lämna ett meddelande som kan upptäckas på andra sidan jorden!",
-    "fromAntipode": "Skickat från andra sidan jorden",
-    "messagesSeenFromOriginal": "Meddelanden sedda från ursprungsplatsen",
-    "messagesSeenAtAntipode": "Meddelanden sedda vid antipodplatsen",
-    "privacyNote": "För din integritet är meddelanden endast synliga inom ett område på 100 km. Din exakta plats lagras eller delas aldrig."
+    "messagesSeenFromOriginal": "Ujumbe unaoonekana kutoka mahali asilia",
+    "messagesSeenAtAntipode": "Ujumbe unaoonekana katika mahali kinyume",
+    "privacyNote": "Kwa faragha yako, ujumbe unaonekana tu ndani ya eneo la kilomita 100. Mahali pako halisi haihifadhiwi wala kushirikiwa."
   },
   "errors": {
     "geolocation": {
@@ -121,24 +129,26 @@
     }
   },
   "footer": {
-    "about": "Om Através",
-    "contact": "Kontakta oss: Rapportera buggar / Funktionsförslag",
-    "aboutContent": "Através låter dig utforska världen genom antipoder. Sök efter valfri plats och hitta direkt dess antipod - den exakt motsatta punkten på jorden. Jämför platser, upptäck intressanta fakta och lämna eller hitta meddelanden som andra har lämnat på dessa spegelplatser. Meddelanden är synliga inom en radie av 100 km för att skydda integriteten, och din exakta position lagras eller delas aldrig.",
-    "languagesTitle": "Språk som stöds:",
-    "craftedWith": "Skapad med React, Firebase och anden av global förundran.",
+    "title": "Através",
+    "subtitle": "Upande wa pili wa dunia, hapa",
+    "about": "Kuhusu Através",
+    "contact": "Wasiliana nasi: Ripoti Makosa / Mapendekezo ya Vipengele",
+    "aboutContent": "Através inakuruhusu kuchunguza dunia kwa njia ya mahali kinyume. Tafuta mahali yoyote na kupata mara moja mahali kinyume chake - sehemu halisi inayokinzana duniani. Linganisha maeneo, gundua ukweli wa kushangaza na acha au gundua ujumbe ulioacha na wengine katika maeneo haya yanayoakisi. Ujumbe unaonekana ndani ya umbali wa kilomita 100 kulinda faragha, na mahali pako halisi haihifadhiwi wala kushirikiwa.",
+    "languagesTitle": "Lugha tunazounga mkono:",
+    "craftedWith": "Imetengenezwa na React, Firebase na roho ya mshangao wa kimataifa.",
     "languages": [
-      "Engelska",
-      "Spanska",
-      "Franska",
-      "Tyska",
-      "Italienska",
-      "Portugisiska",
-      "Nederländska",
-      "Ryska",
-      "Japanska",
-      "Koreanska",
-      "Kinesiska",
-      "Svenska"
+      "Kiingereza",
+      "Kihispania",
+      "Kifaransa",
+      "Kijerumani",
+      "Kiitaliano",
+      "Kireno",
+      "Kiholanzi",
+      "Kirusi",
+      "Kijapani",
+      "Kikorea",
+      "Kichina",
+      "Kiswahili"
     ],
     "privacyContent": [
       "Katika Através, tunathamini faragha yako. Haya ndiyo unapaswa kujua:",

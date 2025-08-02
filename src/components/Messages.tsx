@@ -180,10 +180,10 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                             <Box textAlign="center" py={8}>
                                 <Text fontSize="4xl" mb={3}>🌊</Text>
                                 <Text color="gray.600" mb={2} fontStyle="italic" fontSize="lg">
-                                    No bottles floating here — yet.
+                                    {t('messages.noBottles')}
                                 </Text>
                                 <Text color="gray.500" mb={6} fontSize="sm">
-                                    Be the first to cast a message from here into the digital ocean.
+                                    {t('messages.noBottlesDescription')}
                                 </Text>
                                 <VStack spacing={2}>
                                     <Button

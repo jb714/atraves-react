@@ -1,0 +1,60 @@
+name: Validate Translations
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/locales/**/*.json'
+      - 'scripts/validate-translations.js'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'src/locales/**/*.json'
+      - 'scripts/validate-translations.js'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  validate-translations:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci --legacy-peer-deps
+      
+    - name: Validate translation files
+      run: npm run validate-translations
+      
+    - name: Comment on PR if validation fails
+      if: failure() && github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `❌ **Translation Validation Failed**
+            
+            Your changes have caused translation validation to fail. This usually means:
+            
+            - Missing translation keys in one or more language files
+            - Extra keys that don't exist in the English reference
+            - Empty translation values
+            
+            Please run \`npm run validate-translations\` locally to see the specific issues and fix them before merging.
+            
+            💡 **Pro tip**: Use the English translation file (\`src/locales/en/translation.json\`) as your reference for the correct structure.`
+          })

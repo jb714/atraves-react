@@ -10,13 +10,28 @@
     "defaultAntipode": "印度洋 (-34.0522°, 61.7563°)"
   },
   "input": {
-    "coordinates": "输入坐标",
-    "address": "输入地址",
-    "place": "按地点搜索",
-    "postal": "按邮政编码搜索",
-    "landmark": "按地标搜索",
     "useMyLocation": "使用我的位置",
     "gettingLocation": "正在获取您的位置...",
+    "coordinates": {
+      "label": "输入坐标",
+      "placeholder": "使用下面的坐标输入框"
+    },
+    "address": {
+      "label": "输入地址",
+      "placeholder": "例如：主街123号，城市，国家"
+    },
+    "place": {
+      "label": "按地点搜索",
+      "placeholder": "例如：东方明珠塔，故宫"
+    },
+    "postal": {
+      "label": "按邮政编码搜索",
+      "placeholder": "例如：90210，SW1A 1AA"
+    },
+    "landmark": {
+      "label": "按地标搜索",
+      "placeholder": "例如：长城，泰山"
+    },
     "latitude": {
       "label": "输入纬度",
       "placeholder": "范围：-90至90°（默认：洛杉矶：34.0522）"
@@ -30,7 +45,23 @@
     "title": "漂流瓶",
     "description": "留下一个可以在世界另一端被发现的消息，或查看此位置是否有消息在等你。（为了您的隐私，消息仅在100公里范围内可见。您的精确位置绝不会被存储或共享。）",
     "leaveMessage": "留下讯息",
-    "checkMessages": "查看讯息",
+    "checkMessages": "看看有什么在等待",
+    "tagline": "将思绪播散到虚空 →",
+    "noBottles": "这里没有漂浮的瓶子 — 还没有。",
+    "noBottlesDescription": "成为第一个从这里向数字海洋放出消息的人。",
+    "fromAntipode": "从世界的另一端发送",
+    "noMessages": "此位置没有找到消息。留下一个可以在世界另一端被发现的消息吧！",
+    "error": {
+      "title": "错误",
+      "loading": "加载消息失败。请再试一次。",
+      "sending": "发送消息失败。请再试一次。"
+    },
+    "location": {
+      "updated": {
+        "title": "位置已更新",
+        "description": "您的当前位置已设置"
+      }
+    },
     "modal": {
       "title": "留下讯息",
       "discoverableAt": "您的讯息将在这里被发现：",
@@ -47,8 +78,6 @@
         "description": "此位置没有讯息。为什么不留下一个呢？"
       }
     },
-    "noMessages": "此位置没有找到消息。留下一个可以在世界另一端被发现的消息吧！",
-    "fromAntipode": "来自世界另一端",
     "messagesSeenFromOriginal": "从原始位置看到的消息",
     "messagesSeenAtAntipode": "在对跖点位置看到的消息",
     "privacyNote": "为了您的隐私，消息仅在100公里范围内可见。您的精确位置绝不会被存储或共享。"
@@ -65,16 +94,59 @@
       }
     },
     "antipode": {
-      "title": "计算对跖点时出错",
+      "title": "计算对跖点错误",
       "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "无效纬度",
+        "description": "纬度必须在-90到90度之间"
+      },
+      "invalidLongitude": {
+        "title": "无效经度",
+        "description": "经度必须在-180到180度之间"
+      },
+      "invalid": {
+        "title": "无效坐标",
+        "description": "请检查您的坐标"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "地理编码失败",
+        "description": "无法找到此地址的坐标"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "未找到位置",
+        "description": "请尝试不同的搜索词"
+      },
+      "failed": {
+        "title": "搜索失败",
+        "description": "{{message}}"
+      }
     }
   },
   "footer": {
-    "about": "关于 Através",
+    "title": "Através",
+    "subtitle": "世界的另一端，就在这里",
     "contact": "联系我们：报告错误 / 功能请求",
-    "aboutContent": "Através 让您通过对跖点探索世界。搜索任何位置，立即找到其对跖点 - 地球上的正对面位置。比较地点，发现有趣的事实，在这些镜像位置留下或发现他人留下的消息。为了保护隐私，消息仅在100公里范围内可见，您的确切位置永远不会被存储或共享。",
-    "languagesTitle": "支持的语言：",
-    "craftedWith": "使用 React、Firebase 和全球奇迹精神打造。",
+    "about": "关于Através",
+    "privacy": "隐私",
+    "aboutContent": "Através让您通过对立面探索世界。搜索任何位置并立即找到其对跖点 - 地球上完全相对的点。比较地点，发现有趣的事实，并留下或发现其他人在这些镜像位置留下的消息。消息在100公里半径内可见以保护隐私，您的确切位置永远不会被存储或共享。",
+    "privacyContent": [
+      "在Através，我们认真对待您的隐私。以下是您需要知道的：",
+      "• 我们只在您的浏览器本地存储中存储您的语言偏好，以提供一致的体验。",
+      "• 我们使用匿名分析来了解人们如何使用Através，但我们从不跟踪个别用户。",
+      "• 消息仅在100公里半径内可见以保护隐私。",
+      "• 您的确切位置永远不会被存储或共享。",
+      "• 我们不使用跟踪cookie或收集个人信息。",
+      "如果您对隐私有任何疑问，请联系我们。"
+    ],
+    "lastUpdated": "最后更新：2025年5月",
+    "languagesTitle": "我们支持的语言：",
+    "craftedWith": "用React、Firebase和全球奇迹精神制作。",
     "languages": [
       "英语",
       "西班牙语",
@@ -87,21 +159,10 @@
       "日语",
       "韩语",
       "中文",
-      "瑞典语"
+      "斯瓦希里语"
     ],
-    "privacyContent": [
-      "在Através，我们非常重视您的隐私。请注意：",
-      "• 我们只会将您的语言偏好存储在浏览器的本地存储中，以便为您提供一致的体验。",
-      "• 我们使用匿名分析来了解人们如何使用Através，但绝不会跟踪个人用户。",
-      "• 为了保护隐私，消息仅在100公里范围内可见。",
-      "• 您的精确位置绝不会被存储或共享。",
-      "• 我们不使用任何跟踪Cookie，也不会收集个人信息。",
-      "如果您有任何关于隐私的问题，请联系我们。"
-    ],
-    "privacy": "隐私",
     "analyticsOptOutToast": "您已选择退出匿名分析。",
     "analyticsOptInToast": "您已启用匿名分析。",
-    "analyticsOptOutLabel": "退出匿名分析",
-    "lastUpdated": "最后更新：2025年5月"
+    "analyticsOptOutLabel": "退出匿名分析"
   }
 } 
