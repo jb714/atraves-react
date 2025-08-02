@@ -12,6 +12,11 @@ on:
       - 'src/locales/**/*.json'
       - 'scripts/validate-translations.js'
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   validate-translations:
     runs-on: ubuntu-latest
