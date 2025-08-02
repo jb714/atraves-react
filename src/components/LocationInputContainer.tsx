@@ -253,27 +253,30 @@ const LocationInputContainer = ({
         <Stack spacing={4}>
             <Box 
                 bg="white" 
-                p={4} 
+                p={[3, 4]} 
                 borderRadius="12px" 
                 boxShadow="sm"
                 border="1px solid"
                 borderColor="gray.100"
             >
                 <RadioGroup value={inputMode} onChange={(value) => setInputMode(value as InputMode)}>
-                    <Stack direction="row" spacing={4} wrap="wrap" justify="center" align="center">
-                        <Radio value="coordinates">{t('input.coordinates.label')}</Radio>
-                        <Radio value="address">{t('input.address.label')}</Radio>
-                        <Radio value="place">{t('input.place.label')}</Radio>
-                        <Radio value="postal">{t('input.postal.label')}</Radio>
-                        <Radio value="landmark">{t('input.landmark.label')}</Radio>
-                        <Divider orientation="vertical" height="24px" />
+                    <Stack direction={["column", "row"]} spacing={[2, 4]} wrap="wrap" justify="center" align={["stretch", "center"]}>
+                        <Stack direction={["column", "row"]} spacing={[1, 4]} wrap="wrap" justify="center" align="center">
+                            <Radio value="coordinates" size={["sm", "md"]}>{t('input.coordinates.label')}</Radio>
+                            <Radio value="address" size={["sm", "md"]}>{t('input.address.label')}</Radio>
+                            <Radio value="place" size={["sm", "md"]}>{t('input.place.label')}</Radio>
+                            <Radio value="postal" size={["sm", "md"]}>{t('input.postal.label')}</Radio>
+                            <Radio value="landmark" size={["sm", "md"]}>{t('input.landmark.label')}</Radio>
+                        </Stack>
                         <Button
                             onClick={handleGetCurrentLocation}
                             isLoading={isGettingLocation}
                             loadingText={t('input.useMyLocation')}
                             bg="#ffb88c"
                             color="white"
-                            size="sm"
+                            size={["sm", "sm"]}
+                            width={["full", "auto"]}
+                            mt={[2, 0]}
                             _hover={{ 
                                 bg: "#ff994c", 
                                 transform: "translateY(-1px)", 

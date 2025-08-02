@@ -50,7 +50,7 @@ const ContentWrapper = () => {
     const antipodeCoordinates = getAntipodeCoordinates()
 
     return (
-        <Box px={[2, 4, 6]} pt={8} pb={8}>
+        <Box px={[3, 4, 6]} pt={[6, 8]} pb={[6, 8]}>
             <LocationInputContainer 
                 latitude={latitude}
                 setLatitude={setLatitude}
@@ -59,7 +59,7 @@ const ContentWrapper = () => {
                 address={address}
                 setAddress={setAddress}
             />
-            <Box my={[4, 6, 8]} />
+            <Box my={[3, 4, 6]} />
             <Grid 
                 templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]} 
                 gap={[2, 4, 6]}
@@ -68,7 +68,7 @@ const ContentWrapper = () => {
                     <Box
                         bg="white"
                         borderRadius="12px"
-                        p={4}
+                        p={[3, 4]}
                         boxShadow="sm"
                         border="1px solid"
                         borderColor="gray.100"
@@ -101,7 +101,7 @@ const ContentWrapper = () => {
                     <Box
                         bg="white"
                         borderRadius="12px"
-                        p={4}
+                        p={[3, 4]}
                         boxShadow="sm"
                         border="1px solid"
                         borderColor="gray.100"

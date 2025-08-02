@@ -115,8 +115,8 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
 
     return (
         <Box 
-            mt={8} 
-            p={6} 
+            mt={[6, 8]} 
+            p={[4, 6]} 
             bg="white" 
             borderRadius="12px" 
             boxShadow="sm"
@@ -224,13 +224,13 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                                         </Text>
                                     </Box>
                                 ))}
-                                <Box>
+                                <Stack direction={["column", "row"]} spacing={[2, 4]} align={["stretch", "center"]}>
                                     <Button
                                         bg="#ffb88c"
                                         color="white"
-                                        mr={4}
                                         onClick={onOpen}
                                         isLoading={isLoading}
+                                        width={["full", "auto"]}
                                         _hover={{ 
                                             bg: "#ff994c", 
                                             transform: "translateY(-2px)", 
@@ -248,6 +248,7 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                                         borderColor="#f78c45"
                                         onClick={handleCheckForMessages}
                                         isLoading={isLoading}
+                                        width={["full", "auto"]}
                                         _hover={{ 
                                             bg: "rgba(252, 174, 118, 0.15)", 
                                             borderColor: "#f78c45",
@@ -258,7 +259,7 @@ const Messages = ({ currentLat, currentLng, antipodeLat, antipodeLng }: Messages
                                     >
                                         {t('messages.checkMessages')}
                                     </Button>
-                                </Box>
+                                </Stack>
                             </>
                         )}
                     </VStack>
