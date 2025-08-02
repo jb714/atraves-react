@@ -10,13 +10,28 @@
     "defaultAntipode": "Oceano Indiano (-34.0522°, 61.7563°)"
   },
   "input": {
-    "coordinates": "Inserisci Coordinate",
-    "address": "Inserisci Indirizzo",
-    "place": "Cerca per Luogo",
-    "postal": "Cerca per CAP",
-    "landmark": "Cerca per Punto di Riferimento",
     "useMyLocation": "Usa la Mia Posizione",
     "gettingLocation": "Ottenimento della tua posizione...",
+    "coordinates": {
+      "label": "Inserisci Coordinate",
+      "placeholder": "Usa i campi delle coordinate qui sotto"
+    },
+    "address": {
+      "label": "Inserisci Indirizzo",
+      "placeholder": "es., Via Principale 123, Città, Paese"
+    },
+    "place": {
+      "label": "Cerca per Luogo",
+      "placeholder": "es., Colosseo, Torre di Pisa"
+    },
+    "postal": {
+      "label": "Cerca per CAP",
+      "placeholder": "es., 90210, SW1A 1AA"
+    },
+    "landmark": {
+      "label": "Cerca per Punto di Riferimento",
+      "placeholder": "es., Monte Bianco, Duomo di Milano"
+    },
     "latitude": {
       "label": "Inserisci Latitudine",
       "placeholder": "Intervallo: -90 a 90° (predefinito: Los Angeles: 34.0522)"
@@ -30,7 +45,17 @@
     "title": "Messaggio nella Bottiglia",
     "description": "Lascia un messaggio che sarà scoperto dall'altra parte del mondo, oppure controlla se c'è un messaggio che ti aspetta in questa posizione.",
     "leaveMessage": "Lascia un Messaggio",
-    "checkMessages": "Controlla i Messaggi",
+    "checkMessages": "Vedi Cosa Aspetta",
+    "tagline": "Diffondi un pensiero nel vuoto →",
+    "noBottles": "Nessuna bottiglia galleggia qui — ancora.",
+    "noBottlesDescription": "Sii il primo a lanciare un messaggio da qui nell'oceano digitale.",
+    "fromAntipode": "Inviato dall'altra parte del mondo",
+    "noMessages": "Nessun messaggio trovato in questa posizione. Lascia un messaggio da scoprire dall'altra parte del mondo!",
+    "error": {
+      "title": "Errore",
+      "loading": "Impossibile caricare i messaggi. Riprova.",
+      "sending": "Impossibile inviare il messaggio. Riprova."
+    },
     "modal": {
       "title": "Lascia un Messaggio",
       "discoverableAt": "Il tuo messaggio sarà scoperto a:",
@@ -47,8 +72,12 @@
         "description": "Non ci sono messaggi in questa posizione. Perché non lasciarne uno?"
       }
     },
-    "noMessages": "Nessun messaggio trovato in questa posizione. Lascia un messaggio da scoprire dall'altra parte del mondo!",
-    "fromAntipode": "Inviato dall'altra parte del mondo",
+    "location": {
+      "updated": {
+        "title": "Posizione aggiornata",
+        "description": "La tua posizione attuale è stata impostata"
+      }
+    },
     "messagesSeenFromOriginal": "Messaggi visti dalla posizione originale",
     "messagesSeenAtAntipode": "Messaggi visti nella posizione antipodale",
     "privacyNote": "Per la tua privacy, i messaggi sono visibili solo entro un raggio di 100 km. La tua posizione esatta non viene mai memorizzata o condivisa."
@@ -67,9 +96,41 @@
     "antipode": {
       "title": "Errore nel calcolo dell'antipode",
       "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "Latitudine Non Valida",
+        "description": "La latitudine deve essere tra -90 e 90 gradi"
+      },
+      "invalidLongitude": {
+        "title": "Longitudine Non Valida",
+        "description": "La longitudine deve essere tra -180 e 180 gradi"
+      },
+      "invalid": {
+        "title": "Coordinate Non Valide",
+        "description": "Per favore controlla le tue coordinate"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "Geocodifica Fallita",
+        "description": "Impossibile trovare le coordinate per questo indirizzo"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "Posizione non trovata",
+        "description": "Prova con un termine di ricerca diverso"
+      },
+      "failed": {
+        "title": "Ricerca fallita",
+        "description": "{{message}}"
+      }
     }
   },
   "footer": {
+    "title": "Através",
+    "subtitle": "L'altro lato del mondo, qui",
     "about": "Informazioni su Através",
     "contact": "Contattaci: Segnala bug / Richiedi funzionalità",
     "aboutContent": "Através ti permette di esplorare il mondo attraverso gli opposti. Cerca qualsiasi località e trova istantaneamente la sua antipode - il punto esattamente opposto sulla Terra. Confronta luoghi, scopri curiosità e lascia o scopri messaggi lasciati da altri in queste località speculari. I messaggi sono visibili entro un raggio di 100 km per proteggere la privacy, e la tua posizione esatta non viene mai memorizzata o condivisa.",
@@ -87,7 +148,7 @@
       "Giapponese",
       "Coreano",
       "Cinese",
-      "Svedese"
+      "Swahili"
     ],
     "privacyContent": [
       "Su Através, prendiamo sul serio la tua privacy. Ecco cosa dovresti sapere:",

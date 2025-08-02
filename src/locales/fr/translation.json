@@ -22,7 +22,7 @@
     },
     "place": {
       "label": "Rechercher par Lieu",
-      "placeholder": "ex., Tour Eiffel, Statue de la Liberté"
+      "placeholder": "ex., Tour Eiffel, Château de Versailles"
     },
     "postal": {
       "label": "Rechercher par Code Postal",
@@ -30,7 +30,7 @@
     },
     "landmark": {
       "label": "Rechercher par Point de Repère",
-      "placeholder": "ex., Grand Canyon, Mont Everest"
+      "placeholder": "ex., Mont Blanc, Château de Chambord"
     },
     "latitude": {
       "label": "Entrer la Latitude",
@@ -45,7 +45,17 @@
     "title": "Message dans une Bouteille",
     "description": "Laissez un message qui sera découvert de l'autre côté du monde, ou vérifiez s'il y a un message qui vous attend à cet endroit. (Pour votre confidentialité, les messages ne sont visibles que dans une zone de 100 km. Votre position exacte n'est jamais stockée ni partagée.)",
     "leaveMessage": "Laisser un Message",
-    "checkMessages": "Vérifier les Messages",
+    "checkMessages": "Voir Ce Qui Attend",
+    "tagline": "Diffuser une pensée dans le vide →",
+    "noBottles": "Aucune bouteille ne flotte ici — pour le moment.",
+    "noBottlesDescription": "Soyez le premier à envoyer un message d'ici vers l'océan numérique.",
+    "fromAntipode": "Envoyé de l'autre côté du monde",
+    "noMessages": "Aucun message trouvé à cet endroit. Laissez un message pour qu'il soit découvert de l'autre côté du monde !",
+    "error": {
+      "title": "Erreur",
+      "loading": "Échec du chargement des messages. Veuillez réessayer.",
+      "sending": "Échec de l'envoi du message. Veuillez réessayer."
+    },
     "location": {
       "updated": {
         "title": "Emplacement mis à jour",
@@ -121,6 +131,8 @@
     }
   },
   "footer": {
+    "title": "Através",
+    "subtitle": "L'autre côté du monde, ici",
     "about": "À propos d'Através",
     "contact": "Contactez-nous : Signaler un bug / Suggérer une fonctionnalité",
     "aboutContent": "Através vous permet d'explorer le monde à travers les opposés. Recherchez n'importe quel endroit et trouvez instantanément son antipode - le point exactement opposé sur Terre. Comparez les lieux, découvrez des faits intéressants et laissez ou découvrez des messages laissés par d'autres à ces endroits miroirs. Les messages sont visibles dans un rayon de 100 km pour protéger la vie privée, et votre position exacte n'est jamais stockée ni partagée.",
@@ -138,7 +150,7 @@
       "Japonais",
       "Coréen",
       "Chinois",
-      "Suédois"
+      "Swahili"
     ],
     "privacyContent": [
       "Chez Através, nous prenons votre vie privée au sérieux. Voici ce que vous devez savoir :",

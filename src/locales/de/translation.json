@@ -22,7 +22,7 @@
     },
     "place": {
       "label": "Nach Ort suchen",
-      "placeholder": "z.B., Eiffelturm, Freiheitsstatue"
+      "placeholder": "z.B., Brandenburger Tor, Neuschwanstein"
     },
     "postal": {
       "label": "Nach Postleitzahl suchen",
@@ -30,7 +30,7 @@
     },
     "landmark": {
       "label": "Nach Sehenswürdigkeit suchen",
-      "placeholder": "z.B., Grand Canyon, Mount Everest"
+      "placeholder": "z.B., Zugspitze, Kölner Dom"
     },
     "latitude": {
       "label": "Breitengrad eingeben",
@@ -45,7 +45,17 @@
     "title": "Flaschenpost",
     "description": "Hinterlasse eine Nachricht, die auf der anderen Seite der Welt entdeckt werden kann, oder prüfe, ob an diesem Ort eine Nachricht auf dich wartet. (Zu Ihrem Schutz sind Nachrichten nur innerhalb eines Bereichs von 100 km sichtbar. Ihr genauer Standort wird niemals gespeichert oder geteilt.)",
     "leaveMessage": "Nachricht hinterlassen",
-    "checkMessages": "Nachrichten prüfen",
+    "checkMessages": "Sehen Was Wartet",
+    "tagline": "Einen Gedanken ins Leere senden →",
+    "noBottles": "Hier schwimmen noch keine Flaschen — noch nicht.",
+    "noBottlesDescription": "Seien Sie der Erste, der von hier eine Nachricht in den digitalen Ozean wirft.",
+    "fromAntipode": "Von der anderen Seite der Welt gesendet",
+    "noMessages": "Keine Nachrichten an diesem Ort gefunden. Hinterlassen Sie eine Nachricht, die auf der anderen Seite der Welt entdeckt werden kann!",
+    "error": {
+      "title": "Fehler",
+      "loading": "Nachrichten konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+      "sending": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
     "location": {
       "updated": {
         "title": "Standort aktualisiert",
@@ -68,8 +78,6 @@
         "description": "An diesem Standort gibt es keine Nachrichten. Warum hinterlassen Sie nicht eine?"
       }
     },
-    "noMessages": "Keine Nachrichten an diesem Ort gefunden. Hinterlasse eine Nachricht, die auf der anderen Seite der Welt entdeckt werden kann!",
-    "fromAntipode": "Gesendet von der anderen Seite der Welt",
     "messagesSeenFromOriginal": "Nachrichten vom Ursprungsort aus gesehen",
     "messagesSeenAtAntipode": "Nachrichten am Antipodenstandort gesehen",
     "privacyNote": "Zu Ihrem Schutz sind Nachrichten nur innerhalb eines Bereichs von 100 km sichtbar. Ihr genauer Standort wird niemals gespeichert oder geteilt."
@@ -121,6 +129,8 @@
     }
   },
   "footer": {
+    "title": "Através",
+    "subtitle": "Die andere Seite der Welt, hier",
     "about": "Über Através",
     "contact": "Kontakt: Fehler melden / Funktionswünsche",
     "aboutContent": "Através ermöglicht es Ihnen, die Welt durch Gegensätze zu erkunden. Suchen Sie nach einem beliebigen Ort und finden Sie sofort seinen Antipoden - den genau gegenüberliegenden Punkt auf der Erde. Vergleichen Sie Orte, entdecken Sie interessante Fakten und hinterlassen oder entdecken Sie Nachrichten, die andere an diesen gespiegelten Orten hinterlassen haben. Nachrichten sind in einem Radius von 100 km sichtbar, um die Privatsphäre zu schützen, und Ihr genauer Standort wird niemals gespeichert oder geteilt.",
@@ -138,7 +148,7 @@
       "Japanisch",
       "Koreanisch",
       "Chinesisch",
-      "Schwedisch"
+      "Swahili"
     ],
     "privacyContent": [
       "Bei Através nehmen wir Ihre Privatsphäre ernst. Das sollten Sie wissen:",

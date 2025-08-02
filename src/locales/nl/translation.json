@@ -10,13 +10,28 @@
     "defaultAntipode": "Indische Oceaan (-34.0522°, 61.7563°)"
   },
   "input": {
-    "coordinates": "Voer Coördinaten In",
-    "address": "Voer Adres In",
-    "place": "Zoek op Plaats",
-    "postal": "Zoek op Postcode",
-    "landmark": "Zoek op Bezienswaardigheid",
     "useMyLocation": "Gebruik Mijn Locatie",
     "gettingLocation": "Locatie ophalen...",
+    "coordinates": {
+      "label": "Voer Coördinaten In",
+      "placeholder": "Gebruik de coördinaten velden hieronder"
+    },
+    "address": {
+      "label": "Voer Adres In",
+      "placeholder": "bijv., Hoofdstraat 123, Stad, Land"
+    },
+    "place": {
+      "label": "Zoek op Plaats",
+      "placeholder": "bijv., Rijksmuseum, Keukenhof"
+    },
+    "postal": {
+      "label": "Zoek op Postcode",
+      "placeholder": "bijv., 90210, SW1A 1AA"
+    },
+    "landmark": {
+      "label": "Zoek op Bezienswaardigheid",
+      "placeholder": "bijv., Kinderdijk, Zaanse Schans"
+    },
     "latitude": {
       "label": "Voer Breedtegraad In",
       "placeholder": "Bereik: -90 tot 90° (standaard: Los Angeles: 34.0522)"
@@ -27,10 +42,26 @@
     }
   },
   "messages": {
-    "title": "Brief in een Fles",
+    "title": "Bericht in een Fles",
     "description": "Laat een bericht achter dat aan de andere kant van de wereld gevonden kan worden, of kijk of er een bericht op je wacht op deze locatie. (Voor uw privacy zijn berichten alleen zichtbaar binnen een straal van 100 km. Uw exacte locatie wordt nooit opgeslagen of gedeeld.)",
     "leaveMessage": "Laat een Bericht Achter",
-    "checkMessages": "Controleer Berichten",
+    "checkMessages": "Kijk Wat Er Wacht",
+    "tagline": "Verstuur een gedachte in de leegte →",
+    "noBottles": "Geen flessen drijven hier — nog niet.",
+    "noBottlesDescription": "Wees de eerste die vanaf hier een bericht in de digitale oceaan gooit.",
+    "fromAntipode": "Verzonden vanaf de andere kant van de wereld",
+    "noMessages": "Geen berichten gevonden op deze locatie. Laat een bericht achter om aan de andere kant van de wereld gevonden te worden!",
+    "error": {
+      "title": "Fout",
+      "loading": "Berichten laden mislukt. Probeer opnieuw.",
+      "sending": "Bericht verzenden mislukt. Probeer opnieuw."
+    },
+    "location": {
+      "updated": {
+        "title": "Locatie bijgewerkt",
+        "description": "Uw huidige locatie is ingesteld"
+      }
+    },
     "modal": {
       "title": "Laat een Bericht Achter",
       "discoverableAt": "Je bericht zal hier gevonden worden:",
@@ -47,17 +78,15 @@
         "description": "Er zijn geen berichten op deze locatie. Waarom laat je er niet een achter?"
       }
     },
-    "noMessages": "Geen berichten gevonden op deze locatie. Laat een bericht achter om aan de andere kant van de wereld gevonden te worden!",
-    "fromAntipode": "Verzonden vanaf de andere kant van de wereld",
-    "messagesSeenFromOriginal": "Berichten gezien vanaf de oorspronkelijke locatie",
-    "messagesSeenAtAntipode": "Berichten gezien op de antipodale locatie",
+    "messagesSeenFromOriginal": "Berichten gezien vanaf de originele locatie",
+    "messagesSeenAtAntipode": "Berichten gezien op de antipode locatie",
     "privacyNote": "Voor uw privacy zijn berichten alleen zichtbaar binnen een straal van 100 km. Uw exacte locatie wordt nooit opgeslagen of gedeeld."
   },
   "errors": {
     "geolocation": {
       "notSupported": {
         "title": "Geolocatie niet ondersteund",
-        "description": "Je browser ondersteunt geen geolocatie"
+        "description": "Uw browser ondersteunt geen geolocatie"
       },
       "error": {
         "title": "Locatiefout",
@@ -65,16 +94,59 @@
       }
     },
     "antipode": {
-      "title": "Fout bij het berekenen van de antipode",
+      "title": "Fout bij berekening antipode",
       "description": "{{message}}"
+    },
+    "coordinates": {
+      "invalidLatitude": {
+        "title": "Ongeldige Breedtegraad",
+        "description": "Breedtegraad moet tussen -90 en 90 graden zijn"
+      },
+      "invalidLongitude": {
+        "title": "Ongeldige Lengtegraad",
+        "description": "Lengtegraad moet tussen -180 en 180 graden zijn"
+      },
+      "invalid": {
+        "title": "Ongeldige Coördinaten",
+        "description": "Controleer alstublieft uw coördinaten"
+      }
+    },
+    "geocoding": {
+      "failed": {
+        "title": "Geocodering Mislukt",
+        "description": "Kon geen coördinaten vinden voor dit adres"
+      }
+    },
+    "search": {
+      "notFound": {
+        "title": "Locatie niet gevonden",
+        "description": "Probeer een andere zoekterm"
+      },
+      "failed": {
+        "title": "Zoeken mislukt",
+        "description": "{{message}}"
+      }
     }
   },
   "footer": {
+    "title": "Através",
+    "subtitle": "De andere kant van de wereld, hier",
+    "contact": "Contact Ons: Rapporteer Bugs / Functieverzoeken",
     "about": "Over Através",
-    "contact": "Neem contact op: Bugrapporten / Functieverzoeken",
-    "aboutContent": "Através stelt je in staat om de wereld te verkennen door tegenpolen. Zoek naar elke locatie en vind direct zijn antipode - het exact tegenoverliggende punt op aarde. Vergelijk plaatsen, ontdek weetjes en laat of ontdek berichten achtergelaten door anderen op deze spiegelende locaties. Berichten zijn zichtbaar binnen een straal van 100 km om de privacy te beschermen, en je exacte locatie wordt nooit opgeslagen of gedeeld.",
-    "languagesTitle": "Ondersteunde talen:",
-    "craftedWith": "Gemaakt met React, Firebase en de geest van wereldwonderen.",
+    "privacy": "Privacy",
+    "aboutContent": "Através laat je de wereld verkennen door tegenstellingen. Zoek naar elke locatie en vind direct de antipode - het exact tegenovergestelde punt op aarde. Vergelijk plaatsen, ontdek leuke feiten en laat berichten achter of vind berichten die anderen hebben achtergelaten op deze gespiegelde locaties. Berichten zijn zichtbaar binnen een straal van 100 km om privacy te beschermen, en uw exacte locatie wordt nooit opgeslagen of gedeeld.",
+    "privacyContent": [
+      "Bij Através nemen we uw privacy serieus. Dit is wat u moet weten:",
+      "• We bewaren alleen uw taalvoorkeur in de lokale opslag van uw browser om een consistente ervaring te bieden.",
+      "• We gebruiken anonieme analyses om te begrijpen hoe mensen Através gebruiken, maar we volgen nooit individuele gebruikers.",
+      "• Berichten zijn alleen zichtbaar binnen een straal van 100 km om privacy te beschermen.",
+      "• Uw exacte locatie wordt nooit opgeslagen of gedeeld.",
+      "• We gebruiken geen tracking cookies en verzamelen geen persoonlijke informatie.",
+      "Als u vragen heeft over privacy, neem dan contact met ons op."
+    ],
+    "lastUpdated": "Laatst bijgewerkt: mei 2025",
+    "languagesTitle": "Talen die we ondersteunen:",
+    "craftedWith": "Gemaakt met React, Firebase en de geest van wereldwijde verwondering.",
     "languages": [
       "Engels",
       "Spaans",
@@ -87,21 +159,10 @@
       "Japans",
       "Koreaans",
       "Chinees",
-      "Zweeds"
+      "Swahili"
     ],
-    "privacyContent": [
-      "Bij Através nemen we je privacy serieus. Dit moet je weten:",
-      "• We slaan alleen je taalvoorkeur op in de lokale opslag van je browser om een consistente ervaring te bieden.",
-      "• We gebruiken anonieme analyses om te begrijpen hoe mensen Através gebruiken, maar we volgen nooit individuele gebruikers.",
-      "• Berichten zijn alleen zichtbaar binnen een straal van 100 km om de privacy te beschermen.",
-      "• Je exacte locatie wordt nooit opgeslagen of gedeeld.",
-      "• We gebruiken geen trackingcookies en verzamelen geen persoonlijke informatie.",
-      "Als je vragen hebt over privacy, neem dan contact met ons op."
-    ],
-    "privacy": "Privacy",
-    "analyticsOptOutToast": "Je hebt je afgemeld voor anonieme analyse.",
-    "analyticsOptInToast": "Je hebt anonieme analyse ingeschakeld.",
-    "analyticsOptOutLabel": "Afmelden voor anonieme analyse",
-    "lastUpdated": "Laatst bijgewerkt: mei 2025"
+    "analyticsOptOutToast": "U bent uitgeschreven voor anonieme analyses.",
+    "analyticsOptInToast": "U heeft anonieme analyses ingeschakeld.",
+    "analyticsOptOutLabel": "Uitschrijven voor anonieme analyses"
   }
 } 

@@ -47,6 +47,8 @@
     "leaveMessage": "Leave a Message",
     "checkMessages": "See What's Waiting",
     "tagline": "Broadcast a thought into the void →",
+    "noBottles": "No bottles floating here — yet.",
+    "noBottlesDescription": "Be the first to cast a message from here into the digital ocean.",
     "fromAntipode": "Sent from the other side of the world",
     "noMessages": "No messages found at this location. Leave a message to be discovered on the other side of the world!",
     "error": {
@@ -157,7 +159,7 @@
       "Japanese",
       "Korean",
       "Chinese",
-      "Swedish"
+      "Swahili"
     ],
     "analyticsOptOutToast": "You have opted out of anonymous analytics.",
     "analyticsOptInToast": "You have enabled anonymous analytics.",
