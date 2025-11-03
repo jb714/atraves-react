@@ -32,13 +32,18 @@ cd atraves-react
 2. Install dependencies:
 ```bash
 npm install
+cd functions
+npm install
+cd ..
 ```
 
-3. Create a `.env` file in the root directory with your API keys:
+3. Set up environment variables:
 
-For Google Maps:
+Create a `.env` file in the root directory (see `.env.example` for template):
+
+For Google Maps (Frontend only):
 ```
-REACT_APP_GOOGLE_MAPS_API_KEY=your_production_key_here
+REACT_APP_GOOGLE_MAPS_API_KEY=your_frontend_key_here
 REACT_APP_TEST_GOOGLE_MAPS_KEY=your_test_key_here
 ```
 
@@ -55,20 +60,44 @@ REACT_APP_FIREBASE_APP_ID=your_app_id
 4. Set up Firebase:
    - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com)
    - Enable Firestore Database
+   - Enable Cloud Functions
    - Add a web app to your project
    - Copy the Firebase configuration values to your `.env` file
    - Deploy Firestore security rules (see `firestore.rules`)
 
-5. Start the development server:
+5. **IMPORTANT: Secure your API keys** 🔒
+
+   See [SECURITY_SETUP.md](./SECURITY_SETUP.md) for detailed instructions on:
+   - Creating properly restricted API keys
+   - Setting up backend key for Cloud Functions
+   - Preventing unauthorized API usage
+
+   Quick setup:
+   ```bash
+   # Set backend geocoding key in Firebase Functions
+   firebase functions:config:set google.geocoding_api_key="YOUR_BACKEND_KEY"
+   ```
+
+6. Start the development server:
 ```bash
 npm start
 ```
 
+7. Deploy to Firebase:
+```bash
+npm run build
+firebase deploy
+```
+
 ## Environment Variables
 
-### Google Maps
-- `REACT_APP_GOOGLE_MAPS_API_KEY`: Your Google Maps API key for production
-- `REACT_APP_TEST_GOOGLE_MAPS_KEY`: Your Google Maps API key for development
+### Google Maps (Frontend)
+- `REACT_APP_GOOGLE_MAPS_API_KEY`: Frontend API key (HTTP referrer restricted) for Maps JavaScript API
+- `REACT_APP_TEST_GOOGLE_MAPS_KEY`: Development API key
+
+### Google Maps (Backend)
+- Geocoding API key set via: `firebase functions:config:set google.geocoding_api_key="YOUR_KEY"`
+- Must be IP-restricted to Cloud Functions
 
 ### Firebase
 - `REACT_APP_FIREBASE_API_KEY`: Your Firebase API key
@@ -77,6 +106,8 @@ npm start
 - `REACT_APP_FIREBASE_STORAGE_BUCKET`: Your Firebase storage bucket
 - `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`: Your Firebase messaging sender ID
 - `REACT_APP_FIREBASE_APP_ID`: Your Firebase app ID
+
+**⚠️ Security Note**: See [SECURITY_SETUP.md](./SECURITY_SETUP.md) for proper API key configuration
 
 ## Contributing
 
