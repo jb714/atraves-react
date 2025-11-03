@@ -57,28 +57,40 @@ export const calculateAntipode = (lat: number, lng: number): { lat: number; lng:
 };
 
 export const geocodeAddress = async (address: string): Promise<{ lat: number; lng: number } | null> => {
-    const apiKey = getApiKey();
-    
-    if (!apiKey) {
-        console.error('Google Maps API key is not configured');
-        return null;
-    }
-
     try {
-        const response = await fetch(
-            `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
-                address
-            )}&key=${apiKey}`
-        );
+        // Call our secure Cloud Function HTTP endpoint
+        const functionUrl = process.env.REACT_APP_GEOCODE_FUNCTION_URL ||
+                          'https://us-central1-jb-apps-1d33e.cloudfunctions.net/geocode';
+
+        const response = await fetch(functionUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ address }),
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            console.error("Geocoding error:", error);
+            return null;
+        }
+
         const data = await response.json();
 
-        if (data.status === "OK" && data.results[0]) {
-            const { lat, lng } = data.results[0].geometry.location;
-            return { lat, lng };
+        if (data.success && data.coordinates) {
+            return data.coordinates;
         }
+
         return null;
-    } catch (error) {
+    } catch (error: any) {
         console.error("Geocoding error:", error);
+
+        // Log more details for debugging
+        if (error.message) {
+            console.error("Error message:", error.message);
+        }
+
         return null;
     }
 }; 
